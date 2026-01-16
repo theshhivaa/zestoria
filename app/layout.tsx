@@ -15,8 +15,8 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata: Metadata = {
-  title: "ZESTORIA | Neural Overload",
-  description: "Breach the Infosphere. Technical Fest of Sri Gogalam Arts & Science College.",
+  title: "ZESTORIA | Zestoria twenty six",
+  description: "Zestoria twenty six. Technical Fest of Sri Gogalam Arts & Science College.",
 };
 
 export default function RootLayout({

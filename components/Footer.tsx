@@ -9,7 +9,7 @@ export function Footer() {
                         <div className="flex items-center gap-2 mb-6">
                             <Cpu className="h-6 w-6 text-neon-green" />
                             <span className="font-orbitron font-bold text-xl tracking-wider text-white">
-                                NEURAL<span className="text-neon-green">OVERLOAD</span>
+                                ZESTORIA <span className="text-neon-green">TWENTY SIX</span>
                             </span>
                         </div>
                         <p className="font-mono text-gray-500 text-xs leading-relaxed max-w-xs">
@@ -50,7 +50,7 @@ export function Footer() {
 
                 <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="font-mono text-gray-600 text-[10px] uppercase">
-                        © 2026 Neural Overload. All Systems Operational.
+                        © 2026 Zestoria twenty six. All Systems Operational.
                     </p>
                     <div className="flex items-center gap-2 text-gray-600">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>

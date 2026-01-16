@@ -28,7 +28,7 @@ export function Hero() {
                 >
                     <span className="h-2 w-2 rounded-full bg-neon-green animate-pulse"></span>
                     <span className="text-neon-green/80 text-xs font-mono tracking-[0.2em] uppercase">
-                        Active Link Established // System_Go
+                        Sri Gogalam Arts and Science College
                     </span>
                 </motion.div>
 
@@ -39,8 +39,8 @@ export function Hero() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="font-orbitron font-black text-6xl md:text-8xl lg:text-9xl italic uppercase tracking-tighter text-white mb-4 leading-none"
                 >
-                    Breach the <br />
-                    <span className="text-neon-green">Infosphere</span>
+                    Zestoria <br />
+                    <span className="text-neon-green">twenty six</span>
                 </motion.h1>
 
                 {/* Subtitle */}
