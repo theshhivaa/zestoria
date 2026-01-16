@@ -5,21 +5,21 @@ import { motion } from "framer-motion";
 const schedule = [
     {
         time: "09:00",
-        event: "System Boot (Opening)",
-        location: "Mainframe Area",
-        status: "ON TIME",
+        event: "Opening Ceremony",
+        location: "Main Auditorium",
+        status: "CONFIRMED",
     },
     {
         time: "11:00",
-        event: "The Edge of Reality (Keynote)",
-        location: "Holograph Hall / Node A",
-        status: "SCHEDULED",
+        event: "Keynote: Future of Technology",
+        location: "Main Auditorium",
+        status: "CONFIRMED",
     },
     {
         time: "14:00",
-        event: "Packet Sniffing Workshop",
-        location: "Lab 04 / Subnet C",
-        status: "PENDING",
+        event: "Technical Workshop",
+        location: "Computer Lab",
+        status: "OPEN",
     },
 ];
 
@@ -30,10 +30,10 @@ export function Timeline() {
                 <div className="flex flex-wrap items-end justify-between mb-16 gap-4">
                     <div>
                         <h2 className="font-orbitron font-bold text-4xl md:text-5xl text-white italic uppercase mb-2">
-                            Execution <span className="text-white">Timeline <span className="inline-block w-8 h-1 bg-neon-green ml-2"></span></span>
+                            Event <span className="text-white">Schedule <span className="inline-block w-8 h-1 bg-neon-green ml-2"></span></span>
                         </h2>
                         <p className="font-mono text-gray-500 text-sm tracking-widest uppercase">
-                            Synchronize Local Handshake
+                            Plan Your Day at Zestoria
                         </p>
                     </div>
 

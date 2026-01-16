@@ -24,24 +24,24 @@ export function CallToAction() {
                 </div>
 
                 <h2 className="font-orbitron font-black text-5xl md:text-7xl skew-y-[-2deg] mb-6">
-                    READY FOR <br />
-                    <span className="text-neon-green">UPGRADE?</span>
+                    READY TO <br />
+                    <span className="text-neon-green">COMPETE?</span>
                 </h2>
 
                 <p className="font-mono text-gray-400 text-sm max-w-md mx-auto mb-12 uppercase tracking-widest">
-                    Warning: Signal interference expected. Final registration window is closing.
+                    Registration closes soon. Secure your spot at Zestoria 2026 today.
                 </p>
 
                 <form className="max-w-md mx-auto px-4 w-full">
                     <div className="flex flex-col gap-4">
                         <input
                             type="email"
-                            placeholder="CONNECT_STRING@UID.NET"
+                            placeholder="Enter your email address"
                             className="w-full bg-cyber-dark-gray border border-white/10 px-6 py-4 text-white font-mono text-xs focus:outline-none focus:border-neon-green transition-colors text-center"
                         />
 
                         <button className="w-full bg-transparent border border-neon-green text-neon-green hover:bg-neon-green hover:text-black font-bold uppercase py-4 tracking-[0.2em] transition-all duration-300 clip-path-slant">
-                            Secure Grid Identity &gt;
+                            Register Now {`>`}
                         </button>
                     </div>
                 </form>

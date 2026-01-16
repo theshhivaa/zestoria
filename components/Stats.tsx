@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 const stats = [
-    { label: "Prize Pool", value: "8000+" },
-    { label: "Data Ops", value: "$75K" },
-    { label: "System Protocols", value: "32" },
-    { label: "Architects", value: "20+" },
+    { label: "Participants", value: "500+" },
+    { label: "Prize Pool", value: "₹75K" },
+    { label: "Tech Events", value: "15+" },
+    { label: "Expert Speakers", value: "10+" },
 ];
 
 export function Stats() {

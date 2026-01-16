@@ -5,28 +5,28 @@ import { Shield, Brain, Radio, Database } from "lucide-react";
 
 const domains = [
     {
-        title: "Infiltration",
-        description: "Bypass security measures and access the Core.",
+        title: "Coding & Development",
+        description: "Test your programming skills in hackathons, debugging challenges, and coding competitions.",
         icon: Shield,
-        link: "View Protocols &gt;",
+        link: "Explore Events >",
     },
     {
-        title: "Synthetic AI",
-        description: "Architecting the future of artificial consciousness and machine learning.",
+        title: "AI & Machine Learning",
+        description: "Explore the frontier of artificial intelligence and build intelligent solutions.",
         icon: Brain,
-        link: "Initialize &gt;",
+        link: "Learn More >",
     },
     {
-        title: "Signal Processing",
-        description: "Decipher the noise. Extract the truth from the data stream.",
+        title: "Cybersecurity",
+        description: "Master the art of ethical hacking and network security through CTF challenges.",
         icon: Radio,
-        link: "Tune In &gt;",
+        link: "Join Challenge >",
     },
     {
-        title: "Data Heist",
-        description: "Secure the payload before the system firewall engages.",
+        title: "Robotics & Hardware",
+        description: "Design, build, and battle in the ultimate robotics arena showdown.",
         icon: Database,
-        link: "Start Heist &gt;",
+        link: "View Details >",
     },
 ];
 
@@ -36,10 +36,10 @@ export function Domains() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="mb-16">
                     <h2 className="font-orbitron font-bold text-4xl md:text-5xl text-white italic uppercase mb-2">
-                        Operational <span className="text-neon-green">Domains <span className="inline-block w-8 h-1 bg-neon-green ml-2 animate-pulse"></span></span>
+                        Event <span className="text-neon-green">Tracks <span className="inline-block w-8 h-1 bg-neon-green ml-2 animate-pulse"></span></span>
                     </h2>
                     <p className="font-mono text-gray-500 text-sm tracking-widest">
-                        SELECT YOUR SPECIALIZATION
+                        CHOOSE YOUR SPECIALIZATION
                     </p>
                 </div>
 

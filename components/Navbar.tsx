@@ -16,7 +16,7 @@ export function Navbar() {
                     <div className="flex-shrink-0 flex items-center gap-2">
                         <Cpu className="h-8 w-8 text-neon-green" />
                         <span className="font-orbitron font-bold text-2xl tracking-wider text-white">
-                            NEURAL<span className="text-neon-green">OVERLOAD</span>
+                            ZESTORIA
                         </span>
                     </div>
 
