@@ -81,12 +81,12 @@
         "registrationLink": "#register"
     },
     {
-        "id": "E-FOOTBAL",
-        "title": "E-FOOTBAL",
+        "id": "E-FOOTBALL",
+        "title": "E-FOOTBALL",
         "icon": "Cpu",
         "description": "The ultimate 1v1 showdown. No script, just pure strategy and elite ball control. Cross the line and claim the trophy.",
         "tags": [
-            "E-FOOTBAL",
+            "E-FOOTBALL",
             "1V1"
         ],
         "status": "Registration Open",
