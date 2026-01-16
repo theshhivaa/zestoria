@@ -3,21 +3,20 @@
         "day": 1,
         "events": [
             {
-                "time": "09:00",
-                "event": "Opening Ceremony",
+                "time": "10:00",
+                "event": "HELIX OF OLYMPUS",
                 "location": "Main Auditorium",
                 "status": "CONFIRMED"
             },
             {
-                "time": "11:00",
-                "event": "Keynote: Future of Technology",
+                "time": "11:30",
+                "event": "ZETESIS",
                 "location": "Main Auditorium",
                 "status": "CONFIRMED"
             },
             {
-                "time": "14:00",
-                "event": "Technical Workshop",
-                "location": "Computer Lab",
+                "time": "12:30",
+                "event": "Break",
                 "status": "OPEN"
             }
         ]
@@ -27,7 +26,7 @@
         "events": [
             {
                 "time": "10:00",
-                "event": "Hackathon Kickoff",
+                "evennpm t": "Hackathon Kickoff",
                 "location": "Innovation Hub",
                 "status": "CONFIRMED"
             },
