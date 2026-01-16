@@ -12,17 +12,16 @@
         "registrationLink": ""
     },
     {
-        "id": "paper-presentation",
-        "title": "Paper Presentation",
+        "id": "ZETESIS",
+        "title": "ZETESIS",
         "icon": "Database",
-        "description": "Showcase your research and technical prowess. Present your ideas to the digital council.",
+        "description": "Hunt the Bug, Fix the Logic Where errors end and code begins.",
         "tags": [
-            "Research",
+            "Coding",
             "Technical",
-            "Speech"
         ],
         "status": "Submissions Open",
-        "image": "https://i.ibb.co/KjmKwB8c/68c2739e86bb8405680101.png",
+        "image": "https://i.ibb.co/Csnp0fYm/5115-ABA5-F6-CF-4-A32-AE40-441-E6-A3-ECE15.png",
         "registrationLink": "#register"
     },
     {
