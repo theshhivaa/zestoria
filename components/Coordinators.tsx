@@ -2,45 +2,45 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import speakersData from "@/data/speakers.json";
+import coordinatorsData from "@/data/coordinators.json";
 
-interface Speaker {
+interface Coordinator {
     id: string;
     name: string;
-    topic: string;
+    role: string;
     image: string;
 }
 
-const speakers: Speaker[] = speakersData;
+const coordinators: Coordinator[] = coordinatorsData;
 
-export function Speakers() {
+export function Coordinators() {
     return (
-        <section id="speakers" className="py-24 relative overflow-hidden">
+        <section id="coordinators" className="py-24 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="mb-16">
                     <h2 className="font-orbitron font-bold text-4xl md:text-5xl text-white italic uppercase mb-2">
-                        Featured <span className="text-neon-green">Speakers <span className="inline-block w-8 h-1 bg-neon-green ml-2 animate-pulse"></span></span>
+                        Event <span className="text-neon-green">Coordinators <span className="inline-block w-8 h-1 bg-neon-green ml-2 animate-pulse"></span></span>
                     </h2>
                     <p className="font-mono text-gray-500 text-sm tracking-widest">
-                        MEET THE VISIONARIES
+                        MEET THE TEAM
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {speakers.map((speaker, index) => (
+                    {coordinators.map((coordinator, index) => (
                         <motion.div
-                            key={speaker.id}
+                            key={coordinator.id}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                             className="group relative bg-cyber-dark-gray/50 border border-white/10 overflow-hidden hover:border-neon-green/50 transition-all duration-300"
                         >
-                            {/* Speaker Image with Monochrome Effect */}
+                            {/* Coordinator Image with Monochrome Effect */}
                             <div className="relative h-64 w-full overflow-hidden">
                                 <Image
-                                    src={speaker.image}
-                                    alt={speaker.name}
+                                    src={coordinator.image}
+                                    alt={coordinator.name}
                                     fill
                                     className="object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
                                 />
@@ -51,17 +51,17 @@ export function Speakers() {
                                 <div className="absolute inset-0 border-2 border-transparent group-hover:border-neon-green/30 transition-colors duration-300"></div>
                             </div>
 
-                            {/* Speaker Info */}
+                            {/* Coordinator Info */}
                             <div className="p-6 relative">
                                 {/* Decorative corner */}
                                 <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-neon-green/20 group-hover:border-neon-green/50 transition-colors duration-300"></div>
 
                                 <h3 className="font-orbitron font-bold text-xl text-white mb-2 uppercase group-hover:text-neon-green transition-colors duration-300">
-                                    {speaker.name}
+                                    {coordinator.name}
                                 </h3>
 
                                 <p className="font-mono text-gray-400 text-sm leading-relaxed">
-                                    {speaker.topic}
+                                    {coordinator.role}
                                 </p>
 
                                 {/* Animated underline */}

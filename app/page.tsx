@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Stats } from "@/components/Stats";
-import { Speakers } from "@/components/Speakers";
+import { Coordinators } from "@/components/Coordinators";
 import { Events } from "@/components/Events";
 import { Timeline } from "@/components/Timeline";
 import { CallToAction } from "@/components/CallToAction";
@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <Stats />
       <Events />
-      <Speakers />
+      <Coordinators />
       <Timeline />
       <CallToAction />
       <Footer />

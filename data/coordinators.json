@@ -1,38 +1,38 @@
 [
     {
-        "id": "speaker-1",
+        "id": "coordinator-1",
         "name": "Dr. Arun Kumar",
-        "topic": "The Future of AI in Education",
+        "role": "The Future of AI in Education",
         "image": "https://randomuser.me/api/portraits/men/32.jpg"
     },
     {
-        "id": "speaker-2",
+        "id": "coordinator-2",
         "name": "Priya Sharma",
-        "topic": "Cybersecurity in the Modern Era",
+        "role": "Cybersecurity in the Modern Era",
         "image": "https://randomuser.me/api/portraits/women/44.jpg"
     },
     {
-        "id": "speaker-3",
+        "id": "coordinator-3",
         "name": "Vikram Singh",
-        "topic": "Building Scalable Web Applications",
+        "role": "Building Scalable Web Applications",
         "image": "https://randomuser.me/api/portraits/men/75.jpg"
     },
     {
-        "id": "speaker-4",
+        "id": "coordinator-4",
         "name": "Dr. Meera Patel",
-        "topic": "Machine Learning in Healthcare",
+        "role": "Machine Learning in Healthcare",
         "image": "https://randomuser.me/api/portraits/women/68.jpg"
     },
     {
-        "id": "speaker-5",
+        "id": "coordinator-5",
         "name": "Rajesh Verma",
-        "topic": "Cloud Architecture Best Practices",
+        "role": "Cloud Architecture Best Practices",
         "image": "https://randomuser.me/api/portraits/men/22.jpg"
     },
     {
-        "id": "speaker-6",
+        "id": "coordinator-6",
         "name": "Ananya Gupta",
-        "topic": "The Art of Game Development",
+        "role": "The Art of Game Development",
         "image": "https://randomuser.me/api/portraits/women/90.jpg"
     }
 ]
