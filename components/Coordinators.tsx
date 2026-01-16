@@ -9,6 +9,7 @@ interface Coordinator {
     name: string;
     role: string;
     image: string;
+    objectPosition?: string;
 }
 
 const coordinators: Coordinator[] = coordinatorsData;
@@ -42,6 +43,7 @@ export function Coordinators() {
                                     src={coordinator.image}
                                     alt={coordinator.name}
                                     fill
+                                    style={{ objectPosition: coordinator.objectPosition || 'center' }}
                                     className="object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
                                 />
                                 {/* Overlay gradient */}

@@ -3,7 +3,8 @@
         "id": "coordinator-1",
         "name": "UMA N T",
         "role": "HOD BCA DEPARTMENT",
-        "image": "https://i.ibb.co/sJwBxX7z/Whats-App-Image-2026-01-16-at-19-28-12.jpg"
+        "image": "https://i.ibb.co/sJwBxX7z/Whats-App-Image-2026-01-16-at-19-28-12.jpg",
+        "objectPosition": "top"
     },
     {
         "id": "coordinator-2",
