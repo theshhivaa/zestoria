@@ -76,9 +76,9 @@
             "4vs4",
             "Team death match"
         ],
-        "status": "Registration Open",
+        "status": "https://forms.gle/83QkzxnGRUzDYhmS9",
         "image": "https://i.ibb.co/zHf8pRQc/823-B1827-9-DEB-43-A9-A1-C8-4-C548396-FA27.png",
-        "registrationLink": "#register"
+        "registrationLink": "https://forms.gle/83QkzxnGRUzDYhmS9"
     },
     {
         "id": "E-FOOTBALL",
@@ -89,8 +89,8 @@
             "E-FOOTBALL",
             "1V1"
         ],
-        "status": "Registration Open",
+        "status": "https://forms.gle/TrqmnyBmqzyAuh2M7",
         "image": "https://i.ibb.co/cSdfwp3Q/48-C013-E8-888-C-46-AD-ADA4-AB74-ECAD62-FC.png",
-        "registrationLink": "#register"
+        "registrationLink": "https://forms.gle/TrqmnyBmqzyAuh2M7"
     }
 ]
