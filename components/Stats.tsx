@@ -1,20 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
+import statsData from "@/data/stats.json";
 
-const stats = [
-    { label: "Participants", value: "500+" },
-    { label: "Prize Pool", value: "₹75K" },
-    { label: "Tech Events", value: "15+" },
-    { label: "Expert Speakers", value: "10+" },
-];
+interface StatItem {
+    label: string;
+    value: string;
+}
+
+
 
 export function Stats() {
     return (
         <section className="py-12 bg-cyber-black border-y border-white/5">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    {stats.map((stat, index) => (
+                    {(statsData as StatItem[]).map((stat, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
