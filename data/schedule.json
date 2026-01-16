@@ -1,0 +1,48 @@
+[
+    {
+        "day": 1,
+        "events": [
+            {
+                "time": "09:00",
+                "event": "Opening Ceremony",
+                "location": "Main Auditorium",
+                "status": "CONFIRMED"
+            },
+            {
+                "time": "11:00",
+                "event": "Keynote: Future of Technology",
+                "location": "Main Auditorium",
+                "status": "CONFIRMED"
+            },
+            {
+                "time": "14:00",
+                "event": "Technical Workshop",
+                "location": "Computer Lab",
+                "status": "OPEN"
+            }
+        ]
+    },
+    {
+        "day": 2,
+        "events": [
+            {
+                "time": "10:00",
+                "event": "Hackathon Kickoff",
+                "location": "Innovation Hub",
+                "status": "CONFIRMED"
+            },
+            {
+                "time": "13:00",
+                "event": "Networking Lunch",
+                "location": "Cafeteria",
+                "status": "OPEN"
+            },
+            {
+                "time": "16:00",
+                "event": "Project Expo & Awards",
+                "location": "Main Auditorium",
+                "status": "SCHEDULED"
+            }
+        ]
+    }
+]

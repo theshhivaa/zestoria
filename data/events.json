@@ -1,0 +1,86 @@
+[
+    {
+        "id": "hackathon",
+        "title": "Hackathons",
+        "icon": "Terminal",
+        "description": "24-hour coding sprint to solve real-world problems. Breaching boundaries one line at a time.",
+        "tags": [
+            "Coding",
+            "Innovation",
+            "24h"
+        ],
+        "status": "Registration Open",
+        "image": "/images/events/hackathon.png",
+        "registrationLink": ""
+    },
+    {
+        "id": "paper-presentation",
+        "title": "Paper Presentation",
+        "icon": "Database",
+        "description": "Showcase your research and technical prowess. Present your ideas to the digital council.",
+        "tags": [
+            "Research",
+            "Technical",
+            "Speech"
+        ],
+        "status": "Submissions Open",
+        "image": "https://i.ibb.co/KjmKwB8c/68c2739e86bb8405680101.png",
+        "registrationLink": "#register"
+    },
+    {
+        "id": "robowars",
+        "title": "Robo Wars",
+        "icon": "Zap",
+        "description": "Mechanical gladiators clash in the arena. Design, build, and destroy.",
+        "tags": [
+            "Robotics",
+            "Combat",
+            "Engineering"
+        ],
+        "status": "Slots Filling",
+        "image": "/images/events/robowars.png",
+        "registrationLink": "#register"
+    },
+    {
+        "id": "ctf",
+        "title": "Capture The Flag",
+        "icon": "Shield",
+        "description": "Cybersecurity challenge to test your hacking skills. Find the vulnerabilities, claim the flag.",
+        "tags": [
+            "Security",
+            "Hacking",
+            "CTF"
+        ],
+        "status": "Registration Open",
+        "image": "/images/events/hackathon.png",
+        "registrationLink": "#register"
+    },
+    {
+        "id": "debugging",
+        "title": "Code Debugging",
+        "icon": "Code",
+        "description": "Fix the broken logic before the system crashes. A test of speed and precision.",
+        "tags": [
+            "Logic",
+            "Bug Fixing",
+            "Speed"
+        ],
+        "status": "Walk-in",
+        "image": "/images/events/paper_presentation.png",
+        "registrationLink": "#register"
+    },
+    {
+        "id": "circuit-design",
+        "title": "Circuit Design",
+        "icon": "Cpu",
+        "description": "Design complexity out of simplicity. Master the flow of electrons.",
+        "tags": [
+            "Electronics",
+            "Hardware",
+            "Design"
+        ],
+        "status": "Registration Open",
+        "image": "/images/events/robowars.png",
+        "registrationLink": "#register"
+    }
+]

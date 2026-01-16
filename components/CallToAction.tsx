@@ -28,23 +28,9 @@ export function CallToAction() {
                     <span className="text-neon-green">COMPETE?</span>
                 </h2>
 
-                <p className="font-mono text-gray-400 text-sm max-w-md mx-auto mb-12 uppercase tracking-widest">
-                    Registration closes soon. Secure your spot at Zestoria 2026 today.
+                <p className="font-mono text-gray-400 text-sm max-w-md mx-auto uppercase tracking-widest">
+                    Join us at Zestoria 2026 for an unforgettable tech fest experience.
                 </p>
-
-                <form className="max-w-md mx-auto px-4 w-full">
-                    <div className="flex flex-col gap-4">
-                        <input
-                            type="email"
-                            placeholder="Enter your email address"
-                            className="w-full bg-cyber-dark-gray border border-white/10 px-6 py-4 text-white font-mono text-xs focus:outline-none focus:border-neon-green transition-colors text-center"
-                        />
-
-                        <button className="w-full bg-transparent border border-neon-green text-neon-green hover:bg-neon-green hover:text-black font-bold uppercase py-4 tracking-[0.2em] transition-all duration-300 clip-path-slant">
-                            Register Now {`>`}
-                        </button>
-                    </div>
-                </form>
             </motion.div>
         </section>
     );

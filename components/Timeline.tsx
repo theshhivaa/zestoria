@@ -1,29 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const schedule = [
-    {
-        time: "09:00",
-        event: "Opening Ceremony",
-        location: "Main Auditorium",
-        status: "CONFIRMED",
-    },
-    {
-        time: "11:00",
-        event: "Keynote: Future of Technology",
-        location: "Main Auditorium",
-        status: "CONFIRMED",
-    },
-    {
-        time: "14:00",
-        event: "Technical Workshop",
-        location: "Computer Lab",
-        status: "OPEN",
-    },
-];
+import { useState } from "react";
+import scheduleData from "../data/schedule.json";
 
 export function Timeline() {
+    const [activeDay, setActiveDay] = useState(1);
+
+    const activeSchedule = scheduleData.find(d => d.day === activeDay)?.events || [];
+
     return (
         <section id="schedule" className="py-24 bg-cyber-dark-gray/30 relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,15 +23,31 @@ export function Timeline() {
                     </div>
 
                     <div className="flex gap-2">
-                        <button className="px-6 py-2 bg-neon-green text-black font-bold text-xs uppercase tracking-widest">Day 1</button>
-                        <button className="px-6 py-2 bg-transparent border border-white/20 text-gray-400 font-bold text-xs uppercase tracking-widest hover:border-white/50 transition-colors">Day 2</button>
+                        <button
+                            onClick={() => setActiveDay(1)}
+                            className={`px-6 py-2 font-bold text-xs uppercase tracking-widest transition-colors ${activeDay === 1
+                                    ? 'bg-neon-green text-black'
+                                    : 'bg-transparent border border-white/20 text-gray-400 hover:border-white/50'
+                                }`}
+                        >
+                            Day 1
+                        </button>
+                        <button
+                            onClick={() => setActiveDay(2)}
+                            className={`px-6 py-2 font-bold text-xs uppercase tracking-widest transition-colors ${activeDay === 2
+                                    ? 'bg-neon-green text-black'
+                                    : 'bg-transparent border border-white/20 text-gray-400 hover:border-white/50'
+                                }`}
+                        >
+                            Day 2
+                        </button>
                     </div>
                 </div>
 
                 <div className="space-y-4">
-                    {schedule.map((item, index) => (
+                    {activeSchedule.map((item, index) => (
                         <motion.div
-                            key={index}
+                            key={`${activeDay}-${index}`}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -54,7 +55,7 @@ export function Timeline() {
                             className="flex flex-col md:flex-row items-center border border-white/10 bg-black/40 p-6 hover:border-neon-green/30 transition-colors group"
                         >
                             <div className="flex items-center gap-4 w-full md:w-1/4 mb-4 md:mb-0">
-                                <span className="text-gray-500 font-mono text-xs">EVENT_ID_{index + 10}</span>
+                                <span className="text-gray-500 font-mono text-xs">EVENT_ID_{activeDay}{index + 10}</span>
                                 <span className="font-orbitron font-bold text-3xl text-neon-green">{item.time}</span>
                             </div>
 

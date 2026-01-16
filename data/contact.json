@@ -1,0 +1,38 @@
+{
+    "collegeName": "Sree Gokulam Arts and Science College",
+    "festName": "Zestoria Twenty Six",
+    "tagline": "The premier technical fest of Sree Gokulam Arts and Science College. Join us for an unforgettable celebration of technology and innovation.",
+    "address": {
+        "street": "Sree Gokulam Arts and Science College",
+        "area": "Balussery",
+        "city": "Kozhikode",
+        "state": "Kerala",
+        "pincode": "673612",
+        "country": "India"
+    },
+    "contact": {
+        "email": "zestoria@sgasc.ac.in",
+        "phone": "+91 9876543210",
+        "alternatePhone": "+91 9876543211"
+    },
+    "socialLinks": {
+        "instagram": "https://instagram.com/zestoria2026",
+        "twitter": "https://twitter.com/zestoria2026",
+        "linkedin": "https://linkedin.com/company/zestoria2026"
+    },
+    "quickLinks": [
+        {
+            "label": "Events",
+            "href": "#events"
+        },
+        {
+            "label": "Speakers",
+            "href": "#speakers"
+        },
+        {
+            "label": "Contact",
+            "href": "#contact"
+        }
+    ],
+    "copyright": "© 2026 Zestoria. Sree Gokulam Arts and Science College. All Rights Reserved."
+}
