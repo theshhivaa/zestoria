@@ -25,17 +25,17 @@
         "registrationLink": "#register"
     },
     {
-        "id": "robowars",
-        "title": "Robo Wars",
+        "id": "EREBUS ESCAPE",
+        "title": "EREBUS ESCAPE",
         "icon": "Zap",
-        "description": "Mechanical gladiators clash in the arena. Design, build, and destroy.",
+        "description": "Solve the clues, beat the room, unlock your mind.",
         "tags": [
-            "Robotics",
-            "Combat",
-            "Engineering"
+            "Puzzle",
+            "Logical thinking",
+            "Dark room"
         ],
         "status": "Slots Filling",
-        "image": "/images/events/robowars.png",
+        "image": "https://i.ibb.co/Csnp0fYm/5115-ABA5-F6-CF-4-A32-AE40-441-E6-A3-ECE15.png",
         "registrationLink": "#register"
     },
     {
