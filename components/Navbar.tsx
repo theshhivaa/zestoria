@@ -32,9 +32,7 @@ export function Navbar() {
                                     {item}
                                 </Link>
                             ))}
-                            <button className="bg-transparent border border-neon-green text-neon-green hover:bg-neon-green hover:text-black px-6 py-2 text-xs font-bold uppercase tracking-widest transition-all duration-300 clip-path-slant">
-                                MISS_OP
-                            </button>
+
                         </div>
                     </div>
 
