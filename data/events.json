@@ -35,35 +35,35 @@
             "Dark room"
         ],
         "status": "Slots Filling",
-        "image": "https://i.ibb.co/Csnp0fYm/5115-ABA5-F6-CF-4-A32-AE40-441-E6-A3-ECE15.png",
+        "image": "https://i.ibb.co/7dBcDhZT/451-BDEA6-528-F-44-E5-9-AF2-EF7-FDD01-F7-C6-1-105-c.jpg",
         "registrationLink": "#register"
     },
     {
-        "id": "ctf",
-        "title": "Capture The Flag",
+        "id": "OXYS",
+        "title": "OXYS",
         "icon": "Shield",
-        "description": "Cybersecurity challenge to test your hacking skills. Find the vulnerabilities, claim the flag.",
+        "description": "A fast-paced competition where college students test speed, accuracy, and focus to prove who truly rules the keyboard.",
         "tags": [
-            "Security",
-            "Hacking",
-            "CTF"
+            "Typing challenge",
+            "Speed",
+            "Accuracy"
         ],
         "status": "Registration Open",
-        "image": "/images/events/hackathon.png",
+        "image": "https://i.ibb.co/4wc3WCRq/Whats-App-Image-2026-01-16-at-19-06-22.jpg",
         "registrationLink": "#register"
     },
     {
-        "id": "debugging",
-        "title": "Code Debugging",
+        "id": "WUMPUS WORLD",
+        "title": "WUMPUS WORLD",
         "icon": "Code",
-        "description": "Fix the broken logic before the system crashes. A test of speed and precision.",
+        "description": "A puzzle world where every move matters—use logic, strategy, and smart decisions to survive, avoid dangers, and outthink the unseen Wumpus.",
         "tags": [
-            "Logic",
-            "Bug Fixing",
-            "Speed"
+            "Challenge",
+            "Find the gold",
+            "Escape"
         ],
         "status": "Walk-in",
-        "image": "/images/events/paper_presentation.png",
+        "image": "https://i.ibb.co/vxgdLrLm/C3360650-2265-4-FC5-83-EB-6-CD652689-DC1.png",
         "registrationLink": "#register"
     },
     {
