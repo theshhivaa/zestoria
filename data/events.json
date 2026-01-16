@@ -67,17 +67,30 @@
         "registrationLink": "#register"
     },
     {
-        "id": "circuit-design",
-        "title": "Circuit Design",
+        "id": "BGMI TEAM DEATH MATCH",
+        "title": "BGMI TEAM DEATH MATCH",
         "icon": "Cpu",
-        "description": "Design complexity out of simplicity. Master the flow of electrons.",
+        "description": "Bring your best squad to the Hangar for a high-octane TDM battle. High speed, high stakes, and non-stop action. Outplay, outaim, and outlast the rest.",
         "tags": [
-            "Electronics",
-            "Hardware",
-            "Design"
+            "BGMI",
+            "4vs4",
+            "Team death match"
         ],
         "status": "Registration Open",
-        "image": "/images/events/robowars.png",
+        "image": "https://i.ibb.co/zHf8pRQc/823-B1827-9-DEB-43-A9-A1-C8-4-C548396-FA27.png",
+        "registrationLink": "#register"
+    },
+    {
+        "id": "E-FOOTBAL",
+        "title": "E-FOOTBAL",
+        "icon": "Cpu",
+        "description": "The ultimate 1v1 showdown. No script, just pure strategy and elite ball control. Cross the line and claim the trophy.",
+        "tags": [
+            "E-FOOTBAL",
+            "1V1"
+        ],
+        "status": "Registration Open",
+        "image": "https://i.ibb.co/cSdfwp3Q/48-C013-E8-888-C-46-AD-ADA4-AB74-ECAD62-FC.png",
         "registrationLink": "#register"
     }
 ]
