@@ -3,11 +3,9 @@
         "id": "HELIX OF OLYMPUS",
         "title": "HELIX OF OLYMPUS",
         "icon": "Terminal",
-        "description": "24-hour coding sprint to solve real-world problems. Breaching boundaries one line at a time.",
+        "description": "A platform for curious minds to explore, build, and innovate through tech.",
         "tags": [
-            "Coding",
-            "Innovation",
-            "24h"
+            "CTF"
         ],
         "status": "Registration Open",
         "image": "/images/events/hackathon.png",
