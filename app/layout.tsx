@@ -3,6 +3,7 @@ import { Orbitron, Rajdhani } from "next/font/google";
 import "./globals.css";
 
 import { CustomCursor } from "@/components/CustomCursor";
+import { IntroAnimation } from "@/components/IntroAnimation";
 
 const orbitron = Orbitron({
   variable: "--font-orbitron",
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body
         className={`${orbitron.variable} ${rajdhani.variable} antialiased bg-cyber-black text-foreground selection:bg-neon-green selection:text-black`}
       >
+        <IntroAnimation />
         <CustomCursor />
         {children}
       </body>

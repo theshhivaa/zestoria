@@ -1,45 +1,50 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
-
-const textContainer: Variants = {
-    hidden: { opacity: 0 },
-    show: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.1,
-            delayChildren: 0.3,
-        },
-    },
-};
-
-const textItem: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    show: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            type: "spring",
-            damping: 12,
-            stiffness: 100,
-        }
-    },
-};
+import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useEffect } from "react";
 
 export function Hero() {
+    const mouseX = useMotionValue(0);
+    const mouseY = useMotionValue(0);
+
+    const springX = useSpring(mouseX, { stiffness: 100, damping: 30 });
+    const springY = useSpring(mouseY, { stiffness: 100, damping: 30 });
+
+    useEffect(() => {
+        const handleMouseMove = (e: MouseEvent) => {
+            const { clientX, clientY } = e;
+            const moveX = (clientX - window.innerWidth / 2) / 20;
+            const moveY = (clientY - window.innerHeight / 2) / 20;
+            mouseX.set(moveX);
+            mouseY.set(moveY);
+        };
+
+        window.addEventListener("mousemove", handleMouseMove);
+        return () => window.removeEventListener("mousemove", handleMouseMove);
+    }, [mouseX, mouseY]);
+
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
             {/* Background Grid */}
-            <div
+            <motion.div
                 className="absolute inset-0 z-0 opacity-20"
                 style={{
                     backgroundImage: `linear-gradient(to right, #1a1a1a 1px, transparent 1px), linear-gradient(to bottom, #1a1a1a 1px, transparent 1px)`,
-                    backgroundSize: '40px 40px'
+                    backgroundSize: '40px 40px',
+                    x: springX,
+                    y: springY
                 }}
-            ></div>
+            ></motion.div>
 
             {/* Radial Gradient Overlay */}
-            <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-cyber-black/50 to-cyber-black pointer-events-none"></div>
+            <motion.div
+                className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-cyber-black/50 to-cyber-black pointer-events-none"
+                style={{
+                    x: useSpring(mouseX, { stiffness: 50, damping: 20 }),
+                    y: useSpring(mouseY, { stiffness: 50, damping: 20 }),
+                    scale: 1.1
+                }}
+            ></motion.div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
@@ -58,25 +63,13 @@ export function Hero() {
 
                 {/* Main Title */}
                 <motion.h1
-                    variants={textContainer}
-                    initial="hidden"
-                    animate="show"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
                     className="font-orbitron font-black text-6xl md:text-8xl lg:text-9xl italic uppercase tracking-tighter text-white mb-4 leading-none"
                 >
-                    <span className="block">
-                        {Array.from("Zestoria").map((letter, index) => (
-                            <motion.span variants={textItem} key={index} className="inline-block">
-                                {letter}
-                            </motion.span>
-                        ))}
-                    </span>
-                    <span className="block text-neon-green">
-                        {Array.from("twenty six").map((letter, index) => (
-                            <motion.span variants={textItem} key={index} className="inline-block">
-                                {letter === " " ? "\u00A0" : letter}
-                            </motion.span>
-                        ))}
-                    </span>
+                    Zestoria <br />
+                    <span className="text-neon-green">twenty six</span>
                 </motion.h1>
 
                 {/* Subtitle */}
