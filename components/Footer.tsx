@@ -74,6 +74,9 @@ export function Footer() {
                     <p className="font-mono text-gray-600 text-[10px] uppercase">
                         {contactData.copyright}
                     </p>
+                    <p className="font-mono text-gray-500 text-[10px] uppercase tracking-widest">
+                        Developed by <span className="text-neon-green">SHIVA PRASAD S</span>
+                    </p>
                     <p className="font-mono text-gray-600 text-[10px] uppercase">
                         {contactData.collegeName}
                     </p>
