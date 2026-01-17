@@ -15,7 +15,7 @@ export function Navbar() {
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center gap-2">
-                        <div className="relative w-10 h-10">
+                        <div className="relative w-14 h-14">
                             <Image
                                 src="/images/zestoria-logo.png"
                                 alt="Zestoria Logo"
