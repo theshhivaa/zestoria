@@ -56,10 +56,11 @@
     {
         "eventId": "E-FOOTBALL",
         "rules": [
-            "1v1 Matches.",
-            "Half length: 6 mins.",
-            "Team selection: Clubs only.",
-            "Standard competitive settings."
+            "Match length will be 8 minutes",
+            "Smart assist should be turned off",
+            "Condition should be good",
+            "Every match is a knock out",
+            "Network problem is not considered"
         ]
     },
     {
