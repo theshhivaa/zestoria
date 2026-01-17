@@ -17,6 +17,7 @@
         "id": "coordinator-3",
         "name": "PALLAVI S",
         "role": "GAME COORDINATOR",
-        "image": "https://randomuser.me/api/portraits/men/75.jpg"
+        "image": "/images/pallavi-s.jpg",
+        "objectPosition": "top"
     }
 ]

@@ -83,8 +83,6 @@ export function IntroAnimation() {
                         </div>
                     </div>
 
-                    {/* Glitch Overlay */}
-                    <div className="absolute inset-0 pointer-events-none opacity-10 bg-[url('https://media.giphy.com/media/oEI9uWUicKgZeyXq2w/giphy.gif')] bg-cover mix-blend-screen" />
                 </motion.div>
             )}
         </AnimatePresence>

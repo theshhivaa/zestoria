@@ -31,7 +31,6 @@ export function GamingHub() {
     return (
         <section id="gaming-hub" className="py-24 relative overflow-hidden bg-cyber-black border-t border-white/5">
             {/* Background Effects */}
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
