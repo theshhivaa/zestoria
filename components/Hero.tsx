@@ -1,6 +1,30 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+
+const textContainer: Variants = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+            delayChildren: 0.3,
+        },
+    },
+};
+
+const textItem: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: "spring",
+            damping: 12,
+            stiffness: 100,
+        }
+    },
+};
 
 export function Hero() {
     return (
@@ -34,13 +58,25 @@ export function Hero() {
 
                 {/* Main Title */}
                 <motion.h1
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
+                    variants={textContainer}
+                    initial="hidden"
+                    animate="show"
                     className="font-orbitron font-black text-6xl md:text-8xl lg:text-9xl italic uppercase tracking-tighter text-white mb-4 leading-none"
                 >
-                    Zestoria <br />
-                    <span className="text-neon-green">twenty six</span>
+                    <span className="block">
+                        {Array.from("Zestoria").map((letter, index) => (
+                            <motion.span variants={textItem} key={index} className="inline-block">
+                                {letter}
+                            </motion.span>
+                        ))}
+                    </span>
+                    <span className="block text-neon-green">
+                        {Array.from("twenty six").map((letter, index) => (
+                            <motion.span variants={textItem} key={index} className="inline-block">
+                                {letter === " " ? "\u00A0" : letter}
+                            </motion.span>
+                        ))}
+                    </span>
                 </motion.h1>
 
                 {/* Subtitle */}
