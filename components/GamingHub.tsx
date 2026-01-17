@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Gamepad2, Car, Users, Glasses } from "lucide-react";
 
 const features = [
@@ -53,7 +54,15 @@ export function GamingHub() {
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.2 }}
                             >
-                                <h2 className="font-orbitron font-black text-4xl md:text-6xl text-white mb-2 tracking-tighter uppercase top-heading-shadow">
+                                <div className="mb-6 relative w-32 h-32 md:w-40 md:h-40">
+                                    <Image
+                                        src="/images/aegis-logo.jpg"
+                                        alt="Aegis Arena Logo"
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
+                                <h2 className="font-orbitron font-black text-4xl md:text-6xl text-white mb-2 tracking-tighter uppercase top-heading-shadow mt-4">
                                     Aegis <span className="text-neon-green text-shadow-neon">Arena</span>
                                 </h2>
                                 <p className="font-mono text-neon-green/80 text-lg mb-6 tracking-widest uppercase">
