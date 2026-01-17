@@ -46,3 +46,15 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--neon-green);
 }
+
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+
+  a,
+  button,
+  [role="button"] {
+    cursor: none;
+  }
+}
