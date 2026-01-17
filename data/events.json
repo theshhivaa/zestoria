@@ -20,9 +20,9 @@
             "Coding",
             "Technical"
         ],
-        "status": "Submissions Open",
+        "status": "https://forms.gle/xbLHinx1uhKHVenBA",
         "image": "https://i.ibb.co/Csnp0fYm/5115-ABA5-F6-CF-4-A32-AE40-441-E6-A3-ECE15.png",
-        "registrationLink": "#register"
+        "registrationLink": "https://forms.gle/xbLHinx1uhKHVenBA"
     },
     {
         "id": "EREBUS ESCAPE",
@@ -48,9 +48,9 @@
             "Speed",
             "Accuracy"
         ],
-        "status": "Registration Open",
+        "status": "https://forms.gle/n8ojxXpP9CU1SQ3B6",
         "image": "https://i.ibb.co/4wc3WCRq/Whats-App-Image-2026-01-16-at-19-06-22.jpg",
-        "registrationLink": "#register"
+        "registrationLink": "https://forms.gle/n8ojxXpP9CU1SQ3B6"
     },
     {
         "id": "WUMPUS WORLD",
@@ -92,5 +92,17 @@
         "status": "https://forms.gle/TrqmnyBmqzyAuh2M7",
         "image": "https://i.ibb.co/cSdfwp3Q/48-C013-E8-888-C-46-AD-ADA4-AB74-ECAD62-FC.png",
         "registrationLink": "https://forms.gle/TrqmnyBmqzyAuh2M7"
+    },
+    {
+        "id": "HARMONIA",
+        "title": "HARMONIA",
+        "icon": "WORKSHOP",
+        "description": "An elegant blend of creativity and code, where innovation flows effortlessly.",
+        "tags": [
+            "VIBE CODING"
+        ],
+        "status": "https://forms.gle/JsYaCwcbhSFPeWS49",
+        "image": "https://i.ibb.co/Kj07gyQb/258-C7-E10-A1-BA-4-A0-C-80-C4-569-BCAF52-D42.jpg",
+        "registrationLink": "https://forms.gle/JsYaCwcbhSFPeWS49"
     }
 ]
