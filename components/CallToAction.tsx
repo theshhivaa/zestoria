@@ -16,19 +16,19 @@ export function CallToAction() {
     const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0.5, 0]);
 
     return (
-        <section ref={ref} id="contact" className="py-48 relative overflow-hidden flex flex-col items-center justify-center text-center">
+        <section ref={ref} id="contact" className="py-48 relative overflow-hidden flex flex-col items-center justify-center text-center bg-black">
 
             {/* Graphical Robot Element (Bumblebee) */}
             <motion.div
                 style={{ y }}
                 className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none"
             >
-                <div className="relative w-full h-[120%] max-w-5xl opacity-40">
+                <div className="relative w-full h-[150%] max-w-5xl opacity-40 overflow-hidden">
                     <Image
                         src="/images/bumblebee.png"
                         alt="Bumblebee Graphic"
                         fill
-                        className="object-contain mix-blend-screen"
+                        className="object-contain object-top scale-110 translate-y-[-5%] mix-blend-screen"
                     />
                 </div>
             </motion.div>
