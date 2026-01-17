@@ -53,13 +53,24 @@ export function Hero() {
                 style={{
                     x: useSpring(mouseX, { stiffness: 40, damping: 25 }),
                     y: useSpring(mouseY, { stiffness: 40, damping: 25 }),
-                    scale: 1.05
                 }}
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 0.4, x: 0 }}
                 transition={{ duration: 1.5, delay: 0.5 }}
             >
-                <div className="relative w-full h-full">
+                <motion.div
+                    className="relative w-full h-full"
+                    animate={{
+                        y: [0, -20, 0],
+                        scale: [1, 1.02, 1],
+                        rotate: [-1, 1, -1]
+                    }}
+                    transition={{
+                        duration: 6,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                    }}
+                >
                     <Image
                         src="/images/optimus-prime.png"
                         alt="Graphical Robot Element"
@@ -67,7 +78,7 @@ export function Hero() {
                         priority
                         className="object-contain object-right-bottom mix-blend-screen"
                     />
-                </div>
+                </motion.div>
                 {/* Masking gradient to blend the robot */}
                 <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-cyber-black md:bg-gradient-to-l"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-cyber-black via-transparent to-transparent"></div>
