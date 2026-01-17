@@ -33,6 +33,30 @@ export function GamingHub() {
             {/* Background Effects */}
             <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
 
+            {/* Digital Particles */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                {[...Array(6)].map((_, i) => (
+                    <motion.div
+                        key={i}
+                        className="absolute w-1 h-1 bg-neon-green/20 rounded-full"
+                        style={{
+                            top: `${Math.random() * 100}%`,
+                            left: `${Math.random() * 100}%`,
+                        }}
+                        animate={{
+                            y: [0, -100, 0],
+                            opacity: [0, 0.5, 0],
+                            scale: [1, 2, 1],
+                        }}
+                        transition={{
+                            duration: 5 + Math.random() * 5,
+                            repeat: Infinity,
+                            delay: Math.random() * 5,
+                        }}
+                    />
+                ))}
+            </div>
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}

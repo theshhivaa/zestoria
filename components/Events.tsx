@@ -35,6 +35,19 @@ export function Events() {
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-green/20 to-transparent"></div>
             <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-green/20 to-transparent"></div>
 
+            {/* Graphical Scan Line */}
+            <motion.div
+                className="absolute inset-y-0 w-px bg-gradient-to-b from-transparent via-neon-green/10 to-transparent z-0"
+                animate={{
+                    left: ["0%", "100%", "0%"]
+                }}
+                transition={{
+                    duration: 15,
+                    repeat: Infinity,
+                    ease: "linear"
+                }}
+            />
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

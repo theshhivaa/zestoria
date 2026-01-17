@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, useMotionValue, useSpring } from "framer-motion";
-import { useEffect } from "react";
+import { motion, useMotionValue, useSpring, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 export function Hero() {
@@ -10,6 +10,12 @@ export function Hero() {
 
     const springX = useSpring(mouseX, { stiffness: 100, damping: 30 });
     const springY = useSpring(mouseY, { stiffness: 100, damping: 30 });
+
+    const ref = useRef(null);
+    const { scrollY } = useScroll();
+    const robotY = useTransform(scrollY, [0, 500], [0, 150]);
+    const gridY = useTransform(scrollY, [0, 500], [0, 50]);
+    const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
@@ -33,7 +39,7 @@ export function Hero() {
                     backgroundImage: `linear-gradient(to right, #1a1a1a 1px, transparent 1px), linear-gradient(to bottom, #1a1a1a 1px, transparent 1px)`,
                     backgroundSize: '40px 40px',
                     x: springX,
-                    y: springY
+                    y: gridY,
                 }}
             ></motion.div>
 
@@ -52,25 +58,14 @@ export function Hero() {
                 className="absolute right-0 bottom-0 w-full h-[80%] md:w-[60%] md:h-full z-0 opacity-40 pointer-events-none select-none"
                 style={{
                     x: useSpring(mouseX, { stiffness: 40, damping: 25 }),
-                    y: useSpring(mouseY, { stiffness: 40, damping: 25 }),
+                    y: robotY,
+                    scale: 1.05
                 }}
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 0.4, x: 0 }}
                 transition={{ duration: 1.5, delay: 0.5 }}
             >
-                <motion.div
-                    className="relative w-full h-full"
-                    animate={{
-                        y: [0, -20, 0],
-                        scale: [1, 1.02, 1],
-                        rotate: [-1, 1, -1]
-                    }}
-                    transition={{
-                        duration: 6,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                    }}
-                >
+                <div className="relative w-full h-full">
                     <Image
                         src="/images/optimus-prime.png"
                         alt="Graphical Robot Element"
@@ -78,7 +73,7 @@ export function Hero() {
                         priority
                         className="object-contain object-right-bottom mix-blend-screen"
                     />
-                </motion.div>
+                </div>
                 {/* Masking gradient to blend the robot */}
                 <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-cyber-black md:bg-gradient-to-l"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-cyber-black via-transparent to-transparent"></div>

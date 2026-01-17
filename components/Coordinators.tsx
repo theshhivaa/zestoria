@@ -35,6 +35,7 @@ export function Coordinators() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
+                            whileHover={{ y: -10, scale: 1.02 }}
                             className="group relative bg-cyber-dark-gray/50 border border-white/10 overflow-hidden hover:border-neon-green/50 transition-all duration-300"
                         >
                             {/* Coordinator Image with Monochrome Effect */}
