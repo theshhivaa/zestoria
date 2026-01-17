@@ -23,10 +23,10 @@ export function Navbar() {
                     {/* Desktop Menu */}
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-8">
-                            {["Events", "Coordinators", "Schedule", "Contact"].map((item) => (
+                            {["Events", "Gaming Hub", "Coordinators", "Schedule", "Contact"].map((item) => (
                                 <Link
                                     key={item}
-                                    href={`#${item.toLowerCase()}`}
+                                    href={`#${item.toLowerCase().replace(" ", "-")}`}
                                     className="text-gray-300 hover:text-neon-green px-3 py-2 text-sm font-medium tracking-widest uppercase transition-colors duration-300"
                                 >
                                     {item}
@@ -56,10 +56,10 @@ export function Navbar() {
                     className="md:hidden bg-cyber-black border-b border-neon-green/20"
                 >
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        {["Events", "Coordinators", "Schedule", "Contact"].map((item) => (
+                        {["Events", "Gaming Hub", "Coordinators", "Schedule", "Contact"].map((item) => (
                             <a
                                 key={item}
-                                href={`#${item.toLowerCase()}`}
+                                href={`#${item.toLowerCase().replace(" ", "-")}`}
                                 className="text-gray-300 hover:text-neon-green block px-3 py-2 text-base font-medium uppercase tracking-wider"
                                 onClick={() => setIsOpen(false)}
                             >

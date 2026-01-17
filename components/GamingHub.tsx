@@ -23,7 +23,7 @@ const features = [
 
 export function GamingHub() {
     return (
-        <section className="py-24 relative overflow-hidden bg-cyber-black border-t border-white/5">
+        <section id="gaming-hub" className="py-24 relative overflow-hidden bg-cyber-black border-t border-white/5">
             {/* Background Effects */}
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
@@ -60,9 +60,7 @@ export function GamingHub() {
                                     or a casual player, our hub offers the perfect environment to play, connect, and win.
                                 </p>
 
-                                <button className="px-8 py-3 bg-neon-green text-black font-orbitron font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-300 clip-path-slant">
-                                    Enter The Arena
-                                </button>
+
                             </motion.div>
                         </div>
 
