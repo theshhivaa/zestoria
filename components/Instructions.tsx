@@ -10,7 +10,7 @@ export function Instructions() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <section id="instructions" className="py-24 relative overflow-hidden bg-cyber-black">
+        <section id="protocols" className="py-24 relative overflow-hidden bg-cyber-black">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

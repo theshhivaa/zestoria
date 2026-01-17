@@ -31,7 +31,7 @@ export function Navbar() {
                     {/* Desktop Menu */}
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-8">
-                            {["Events", "Gaming Hub", "Coordinators", "Schedule", "Contact"].map((item) => (
+                            {["Events", "Gaming Hub", "Protocols", "Coordinators", "Schedule", "Contact"].map((item) => (
                                 <Link
                                     key={item}
                                     href={`#${item.toLowerCase().replace(" ", "-")}`}
@@ -64,7 +64,7 @@ export function Navbar() {
                     className="md:hidden bg-cyber-black border-b border-neon-green/20"
                 >
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        {["Events", "Gaming Hub", "Coordinators", "Schedule", "Contact"].map((item) => (
+                        {["Events", "Gaming Hub", "Protocols", "Coordinators", "Schedule", "Contact"].map((item) => (
                             <a
                                 key={item}
                                 href={`#${item.toLowerCase().replace(" ", "-")}`}
