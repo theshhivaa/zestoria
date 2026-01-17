@@ -23,12 +23,12 @@ export function CallToAction() {
                 style={{ y }}
                 className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none"
             >
-                <div className="relative w-full h-[200%] max-w-7xl translate-y-[20%] overflow-hidden">
+                <div className="relative w-full h-[120%] max-w-5xl opacity-40">
                     <Image
                         src="/images/bumblebee.png"
                         alt="Bumblebee Graphic"
                         fill
-                        className="object-contain object-top opacity-90 scale-125 translate-y-[-10%]"
+                        className="object-contain mix-blend-screen"
                     />
                 </div>
             </motion.div>
