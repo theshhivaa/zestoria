@@ -4,6 +4,7 @@ import { Stats } from "@/components/Stats";
 import { Coordinators } from "@/components/Coordinators";
 import { Events } from "@/components/Events";
 import { GamingHub } from "@/components/GamingHub";
+import { Instructions } from "@/components/Instructions";
 import { Timeline } from "@/components/Timeline";
 import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
@@ -16,6 +17,7 @@ export default function Home() {
       <Stats />
       <Events />
       <GamingHub />
+      <Instructions />
       <Coordinators />
       <Timeline />
       <CallToAction />

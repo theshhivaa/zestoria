@@ -1,0 +1,74 @@
+[
+    {
+        "eventId": "HELIX OF OLYMPUS",
+        "rules": [
+            "Team size: 2 members.",
+            "Usage of mobile phones is strictly prohibited.",
+            "Any kind of malpractice will lead to disqualification.",
+            "Judges' decision will be final."
+        ]
+    },
+    {
+        "eventId": "ZETESIS",
+        "rules": [
+            "Individual participation.",
+            "Debugging challenge.",
+            "Code must be efficient and clean.",
+            "Time limit will be strictly followed."
+        ]
+    },
+    {
+        "eventId": "EREBUS ESCAPE",
+        "rules": [
+            "Team size: 3-4 members.",
+            "Do not damage any property inside the room.",
+            "Physical force is not required to solve puzzles.",
+            "Complete within the time limit."
+        ]
+    },
+    {
+        "eventId": "OXYS",
+        "rules": [
+            "Individual participation.",
+            "Typing speed and accuracy will be measured.",
+            "Keyboard and mouse provided.",
+            "No personal peripherals allowed."
+        ]
+    },
+    {
+        "eventId": "WUMPUS WORLD",
+        "rules": [
+            "Strategic roadmap creation.",
+            "Logic-based puzzle solving.",
+            "Explain your moves to the coordinator.",
+            "Points awarded for efficiency."
+        ]
+    },
+    {
+        "eventId": "BGMI TEAM DEATH MATCH",
+        "rules": [
+            "Squad of 4 players.",
+            "Emulators not allowed.",
+            "Fair play is mandatory.",
+            "Desync or lag excuses will not be entertained."
+        ]
+    },
+    {
+        "eventId": "E-FOOTBALL",
+        "rules": [
+            "1v1 Matches.",
+            "Half length: 6 mins.",
+            "Team selection: Clubs only.",
+            "Standard competitive settings."
+        ]
+    },
+    {
+        "eventId": "HARMONIA",
+        "rules": [
+            "Showcase your creativity.",
+            "Submission must be original.",
+            "Adhere to the theme.",
+            "Format guidelines must be followed."
+        ]
+    }
+]
