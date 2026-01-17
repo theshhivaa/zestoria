@@ -14,8 +14,11 @@ export function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
-                    <div className="flex-shrink-0 flex items-center gap-2">
-                        <div className="relative w-14 h-14">
+                    <Link href="/" className="flex-shrink-0 flex items-center gap-2 group cursor-pointer" onClick={(e) => {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}>
+                        <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
                             <Image
                                 src="/images/zestoria-logo.png"
                                 alt="Zestoria Logo"
@@ -23,10 +26,10 @@ export function Navbar() {
                                 className="object-contain"
                             />
                         </div>
-                        <span className="font-orbitron font-bold text-2xl tracking-wider text-white">
+                        <span className="font-orbitron font-bold text-2xl tracking-wider text-white group-hover:text-neon-green transition-colors duration-300">
                             ZESTORIA
                         </span>
-                    </div>
+                    </Link>
 
                     {/* Desktop Menu */}
                     <div className="hidden md:block">
