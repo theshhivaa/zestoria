@@ -25,6 +25,7 @@ interface EventData {
     status: string;
     image: string;
     registrationLink: string;
+    objectPosition?: string;
 }
 
 export function Events() {
@@ -67,6 +68,7 @@ export function Events() {
                                         src={event.image}
                                         alt={event.title}
                                         fill
+                                        style={{ objectPosition: event.objectPosition || 'center' }}
                                         className="object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
