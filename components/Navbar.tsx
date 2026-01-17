@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
-import { Menu, X, Cpu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Navbar() {
@@ -14,7 +15,14 @@ export function Navbar() {
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center gap-2">
-                        <Cpu className="h-8 w-8 text-neon-green" />
+                        <div className="relative w-10 h-10">
+                            <Image
+                                src="/images/zestoria-logo.jpg"
+                                alt="Zestoria Logo"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
                         <span className="font-orbitron font-bold text-2xl tracking-wider text-white">
                             ZESTORIA
                         </span>
