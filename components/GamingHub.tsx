@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Gamepad2, Car, Users } from "lucide-react";
+import { Gamepad2, Car, Users, Glasses } from "lucide-react";
 
 const features = [
     {
@@ -18,6 +18,11 @@ const features = [
         icon: Users,
         title: "Community Hub",
         description: "Connect with fellow gamers, form squads, and participate in daily scrims and tournaments."
+    },
+    {
+        icon: Glasses,
+        title: "Virtual Reality",
+        description: "Step beyond the screen. Dive into immersive worlds with our premium VR stations and experience gaming in a whole new dimension."
     }
 ];
 
