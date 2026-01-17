@@ -9,8 +9,9 @@
     {
         "id": "coordinator-2",
         "name": "DINESH KUMAR C P",
-        "role": "EVENT CONVINIER",
-        "image": "https://i.ibb.co/WvbYM0Dz/Whats-App-Image-2026-01-17-at-11-57-00.jpg"
+        "role": "EVENT COORDINATOR",
+        "image": "https://i.ibb.co/WvbYM0Dz/Whats-App-Image-2026-01-17-at-11-57-00.jpg",
+        "objectPosition": "top"
     },
     {
         "id": "coordinator-3",
