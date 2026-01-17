@@ -4,7 +4,7 @@ export function Footer() {
     return (
         <footer className="bg-black border-t border-white/10 pt-24 pb-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
                     {/* About Section */}
                     <div>
@@ -51,6 +51,23 @@ export function Footer() {
                             <p>{contactData.address.pincode}</p>
                             <p>{contactData.address.country}</p>
                         </address>
+                    </div>
+
+                    {/* Socials */}
+                    <div>
+                        <h4 className="font-bold text-white uppercase tracking-widest text-xs mb-6">Follow Us</h4>
+                        <ul className="space-y-4 font-mono text-xs text-gray-400">
+                            <li>
+                                <a
+                                    href={contactData.socialLinks.instagram}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 hover:text-neon-green transition-colors"
+                                >
+                                    <span className="text-neon-green">Instagram:</span> @zestoria2026
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
