@@ -8,32 +8,14 @@
     },
     {
         "id": "coordinator-2",
-        "name": "Priya Sharma",
-        "role": "Cybersecurity in the Modern Era",
-        "image": "https://randomuser.me/api/portraits/women/44.jpg"
+        "name": "DINESH KUMAR C P",
+        "role": "EVENT CONVINIER",
+        "image": "https://i.ibb.co/WvbYM0Dz/Whats-App-Image-2026-01-17-at-11-57-00.jpg"
     },
     {
         "id": "coordinator-3",
-        "name": "Vikram Singh",
-        "role": "Building Scalable Web Applications",
+        "name": "PALLAVI S",
+        "role": "GAME COORDINATOR",
         "image": "https://randomuser.me/api/portraits/men/75.jpg"
-    },
-    {
-        "id": "coordinator-4",
-        "name": "Dr. Meera Patel",
-        "role": "Machine Learning in Healthcare",
-        "image": "https://randomuser.me/api/portraits/women/68.jpg"
-    },
-    {
-        "id": "coordinator-5",
-        "name": "Rajesh Verma",
-        "role": "Cloud Architecture Best Practices",
-        "image": "https://randomuser.me/api/portraits/men/22.jpg"
-    },
-    {
-        "id": "coordinator-6",
-        "name": "Ananya Gupta",
-        "role": "The Art of Game Development",
-        "image": "https://randomuser.me/api/portraits/women/90.jpg"
     }
 ]
