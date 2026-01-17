@@ -20,15 +20,15 @@ export function CallToAction() {
 
             {/* Graphical Robot Element (Bumblebee) */}
             <motion.div
-                style={{ y, opacity }}
+                style={{ y }}
                 className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none"
             >
-                <div className="relative w-full h-[150%] max-w-5xl">
+                <div className="relative w-full h-[200%] max-w-7xl translate-y-[20%] overflow-hidden">
                     <Image
                         src="/images/bumblebee.png"
                         alt="Bumblebee Graphic"
                         fill
-                        className="object-contain opacity-40 mix-blend-screen"
+                        className="object-contain object-top opacity-90 scale-125 translate-y-[-10%]"
                     />
                 </div>
             </motion.div>
