@@ -10,7 +10,8 @@
         "id": "coordinator-2",
         "name": "DINESH KUMAR C P",
         "role": "EVENT COORDINATOR",
-        "image": "/images/dinesh-kumar.jpg"
+        "image": "/images/dinesh-kumar.jpg",
+        "objectPosition": "top"
     },
     {
         "id": "coordinator-3",
