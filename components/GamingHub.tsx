@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Gamepad2, Monitor, Trophy, Users } from "lucide-react";
+import { Gamepad2, Car, Users } from "lucide-react";
 
 const features = [
     {
@@ -10,19 +10,14 @@ const features = [
         description: "Experience next-gen gaming on the latest PlayStation 5 consoles with 4K visuals and haptic feedback."
     },
     {
-        icon: Monitor,
-        title: "High-End PCs",
-        description: "Dominate the arena with our state-of-the-art gaming rigs equipped for competitive esports."
+        icon: Car,
+        title: "Driving Simulator",
+        description: "Feel the adrenaline with our realistic driving simulator. Experience the thrill of professional racing."
     },
     {
         icon: Users,
         title: "Community Hub",
         description: "Connect with fellow gamers, form squads, and participate in daily scrims and tournaments."
-    },
-    {
-        icon: Trophy,
-        title: "Tournaments",
-        description: "Regular tournaments for FIFA, Tekken, Mortal Kombat, and more with exciting prize pools."
     }
 ];
 
