@@ -1,0 +1,99 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Gamepad2, Monitor, Trophy, Users } from "lucide-react";
+
+const features = [
+    {
+        icon: Gamepad2,
+        title: "PS5 Experience",
+        description: "Experience next-gen gaming on the latest PlayStation 5 consoles with 4K visuals and haptic feedback."
+    },
+    {
+        icon: Monitor,
+        title: "High-End PCs",
+        description: "Dominate the arena with our state-of-the-art gaming rigs equipped for competitive esports."
+    },
+    {
+        icon: Users,
+        title: "Community Hub",
+        description: "Connect with fellow gamers, form squads, and participate in daily scrims and tournaments."
+    },
+    {
+        icon: Trophy,
+        title: "Tournaments",
+        description: "Regular tournaments for FIFA, Tekken, Mortal Kombat, and more with exciting prize pools."
+    }
+];
+
+export function GamingHub() {
+    return (
+        <section className="py-24 relative overflow-hidden bg-cyber-black border-t border-white/5">
+            {/* Background Effects */}
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="relative rounded-2xl overflow-hidden border border-neon-green/30 bg-black/40 backdrop-blur-sm p-8 md:p-12 lg:p-16"
+                >
+                    {/* Glowing corners */}
+                    <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-neon-green rounded-tl-2xl"></div>
+                    <div className="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-neon-green rounded-br-2xl"></div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.2 }}
+                            >
+                                <h2 className="font-orbitron font-black text-4xl md:text-6xl text-white mb-2 tracking-tighter uppercase top-heading-shadow">
+                                    Aegis <span className="text-neon-green text-shadow-neon">Arena</span>
+                                </h2>
+                                <p className="font-mono text-neon-green/80 text-lg mb-6 tracking-widest uppercase">
+                                    // The Ultimate Gaming Sanctuary
+                                </p>
+                                <p className="text-gray-400 mb-8 leading-relaxed max-w-xl">
+                                    Step into the future of collegiate gaming. The Aegis Arena is a dedicated space
+                                    designed for gamers, by gamers. Whether you're a competitive esports athlete
+                                    or a casual player, our hub offers the perfect environment to play, connect, and win.
+                                </p>
+
+                                <button className="px-8 py-3 bg-neon-green text-black font-orbitron font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-300 clip-path-slant">
+                                    Enter The Arena
+                                </button>
+                            </motion.div>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            {features.map((feature, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.3 + (index * 0.1) }}
+                                    className="bg-white/5 border border-white/10 p-6 rounded-lg hover:border-neon-green/50 hover:bg-white/10 transition-colors group"
+                                >
+                                    <feature.icon className="w-8 h-8 text-neon-green mb-4 group-hover:scale-110 transition-transform duration-300" />
+                                    <h3 className="font-orbitron font-bold text-lg text-white mb-2 uppercase group-hover:text-neon-green transition-colors">
+                                        {feature.title}
+                                    </h3>
+                                    <p className="text-gray-400 text-sm leading-relaxed">
+                                        {feature.description}
+                                    </p>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </motion.div>
+            </div>
+        </section>
+    );
+}

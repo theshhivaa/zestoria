@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Stats } from "@/components/Stats";
 import { Coordinators } from "@/components/Coordinators";
 import { Events } from "@/components/Events";
+import { GamingHub } from "@/components/GamingHub";
 import { Timeline } from "@/components/Timeline";
 import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Stats />
       <Events />
+      <GamingHub />
       <Coordinators />
       <Timeline />
       <CallToAction />
