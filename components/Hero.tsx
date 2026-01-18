@@ -33,34 +33,34 @@ export function Hero() {
 
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-            {/* Background Grid */}
+            {/* Background Grid - Subtle dot pattern for a cleaner feel */}
             <motion.div
-                className="absolute inset-0 z-0 opacity-20"
+                className="absolute inset-0 z-0 opacity-30"
                 style={{
-                    backgroundImage: `linear-gradient(to right, #1a1a1a 1px, transparent 1px), linear-gradient(to bottom, #1a1a1a 1px, transparent 1px)`,
-                    backgroundSize: '40px 40px',
+                    backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)`,
+                    backgroundSize: '30px 30px',
                     x: springX,
                     y: gridY,
                 }}
             ></motion.div>
 
-            {/* Radial Gradient Overlay */}
+            {/* Radial Gradient Overlay - Smoother blending */}
             <motion.div
-                className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-cyber-black/50 to-cyber-black pointer-events-none"
+                className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-black/20 to-cyber-black pointer-events-none"
                 style={{
                     x: useSpring(mouseX, { stiffness: 50, damping: 20 }),
                     y: useSpring(mouseY, { stiffness: 50, damping: 20 }),
-                    scale: 1.1
+                    scale: 1.2
                 }}
             ></motion.div>
 
             {/* Graphical Robot Element */}
             <motion.div
-                className="absolute right-0 bottom-0 w-full h-[80%] md:w-[60%] md:h-full z-0 opacity-40 pointer-events-none select-none"
+                className="absolute right-0 bottom-0 w-full h-[80%] md:w-[65%] md:h-full z-0 opacity-40 pointer-events-none select-none"
                 style={{
                     x: useSpring(mouseX, { stiffness: 40, damping: 25 }),
                     y: robotY,
-                    scale: 1.05
+                    scale: 1.1
                 }}
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 0.4, x: 0 }}
@@ -72,12 +72,13 @@ export function Hero() {
                         alt="Graphical Robot Element"
                         fill
                         priority
-                        className="object-contain object-right-bottom mix-blend-screen"
+                        className="object-contain object-right-bottom mix-blend-screen brightness-125 contrast-125 hover:brightness-150 transition-all duration-700"
                     />
                 </div>
-                {/* Masking gradient to blend the robot */}
-                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-cyber-black md:bg-gradient-to-l"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-cyber-black via-transparent to-transparent"></div>
+                {/* Advanced multi-layer masking to eliminate boxy edges and improve blending */}
+                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-cyber-black/20 to-cyber-black pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-cyber-black via-transparent to-transparent pointer-events-none"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_right_bottom,transparent_0%,#050505_85%)] pointer-events-none"></div>
             </motion.div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-12">

@@ -85,9 +85,6 @@ export function Events() {
                                         className="object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-                                    <div className="absolute top-0 right-0 p-3 bg-black/50 backdrop-blur-sm border-l border-b border-neon-green/30">
-                                        <IconComponent className="w-6 h-6 text-neon-green" />
-                                    </div>
                                 </div>
 
                                 <div className="p-6 md:p-8 flex-1 flex flex-col">
