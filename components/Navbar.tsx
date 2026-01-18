@@ -23,12 +23,12 @@ export function Navbar() {
                                 window.scrollTo({ top: 0, behavior: 'smooth' });
                             }
                         }}>
-                            <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
+                            <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110 overflow-hidden">
                                 <Image
                                     src="/images/zestoria-logo.png"
                                     alt="Zestoria Logo"
                                     fill
-                                    className="object-contain"
+                                    className="object-contain scale-110"
                                 />
                             </div>
                             <span className="font-orbitron font-bold text-2xl tracking-wider text-white group-hover:text-neon-green transition-colors duration-300">

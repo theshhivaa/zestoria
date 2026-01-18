@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import {
     Home,
     Zap,
@@ -9,7 +10,6 @@ import {
     ScrollText,
     Users,
     Mail,
-    Hexagon,
     X
 } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -88,9 +88,6 @@ export function CircularMenu({ isOpen, onClose }: CircularMenuProps) {
                         <h2 className="font-orbitron font-bold text-4xl md:text-5xl text-white mb-4">
                             COMMAND <span className="text-neon-green">CENTER</span>
                         </h2>
-                        <p className="font-mono text-gray-500 text-sm tracking-widest uppercase">
-                            _Interface_Initialized
-                        </p>
                     </motion.div>
 
                     <motion.div
@@ -185,14 +182,20 @@ export function CircularMenu({ isOpen, onClose }: CircularMenuProps) {
                         {/* Central Core */}
                         <motion.div
                             animate={{
-                                scale: [1, 1.05, 1],
-                                rotate: [0, 90, 0]
+                                scale: [1, 1.05, 1]
                             }}
                             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-                            className="relative w-24 h-24 md:w-40 md:h-40 bg-black border-4 border-neon-green/30 rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(204,255,0,0.1)] z-10"
+                            className="relative w-24 h-24 md:w-40 md:h-40 bg-black border-4 border-neon-green/30 rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(204,255,0,0.1)] z-10 p-4"
                         >
                             <div className="absolute inset-2 border border-neon-green/10 rounded-full animate-ping"></div>
-                            <Hexagon className="w-12 h-12 md:w-20 md:h-20 text-neon-green animate-pulse" />
+                            <div className="relative w-full h-full animate-pulse overflow-hidden">
+                                <Image
+                                    src="/images/zestoria-logo.png"
+                                    alt="Zestoria Logo"
+                                    fill
+                                    className="object-contain scale-125"
+                                />
+                            </div>
                         </motion.div>
                     </motion.div>
 
