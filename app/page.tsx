@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { Stats } from "@/components/Stats";
+
 import { Coordinators } from "@/components/Coordinators";
 import { Events } from "@/components/Events";
 import { GamingHub } from "@/components/GamingHub";
@@ -18,7 +18,7 @@ export default function Home() {
       <FloatingGraphics />
       <Navbar />
       <Hero />
-      <Stats />
+
       <Events />
       <GamingHub />
       <Instructions />

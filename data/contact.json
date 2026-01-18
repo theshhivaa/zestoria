@@ -3,12 +3,13 @@
     "festName": "Zestoria Twenty Six",
     "tagline": "The premier technical fest of Sree Gokulam Arts and Science College. Join us for an unforgettable celebration of technology and innovation.",
     "address": {
-        "street": "Sree Gokulam Arts and Science College",
-        "area": "Balussery",
+        "street": "Koyilandy - Edavanna Rd",
+        "area": "Near Police Station, Balussery",
         "city": "Kozhikode",
         "state": "Kerala",
         "pincode": "673612",
-        "country": "India"
+        "country": "India",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sree+Gokulam+Arts+and+Science+College+Balussery"
     },
     "contact": {
         "email": "bcagklm@gmail.com",
@@ -16,7 +17,7 @@
         "alternatePhone": "+91 7012535037"
     },
     "socialLinks": {
-        "instagram": "https://instagram.com/zestoria2026",
+        "instagram": "https://instagram.com/codingclubsgasc",
         "twitter": "https://twitter.com/zestoria2026",
         "linkedin": "https://linkedin.com/company/zestoria2026"
     },
