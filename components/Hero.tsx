@@ -97,12 +97,46 @@ export function Hero() {
                     {/* Main Title */}
                     <motion.h1
                         initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
+                        animate={{
+                            opacity: 1,
+                            scale: 1,
+                            textShadow: [
+                                "0 0 0px rgba(255,255,255,0)",
+                                "0 0 20px rgba(255,255,255,0.3)",
+                                "0 0 0px rgba(255,255,255,0)"
+                            ]
+                        }}
+                        transition={{
+                            duration: 0.8,
+                            delay: 0.2,
+                            textShadow: {
+                                duration: 2,
+                                repeat: Infinity,
+                                repeatDelay: 1,
+                                ease: "easeInOut"
+                            }
+                        }}
                         className="font-orbitron font-black text-6xl md:text-8xl lg:text-9xl italic uppercase tracking-tighter text-white mb-4 leading-none"
                     >
                         Zestoria <br />
-                        <span className="text-neon-green">twenty six</span>
+                        <motion.span
+                            animate={{
+                                textShadow: [
+                                    "0 0 0px rgba(204,255,0,0)",
+                                    "0 0 25px rgba(204,255,0,0.5)",
+                                    "0 0 0px rgba(204,255,0,0)"
+                                ]
+                            }}
+                            transition={{
+                                duration: 2,
+                                repeat: Infinity,
+                                repeatDelay: 1,
+                                ease: "easeInOut"
+                            }}
+                            className="text-neon-green"
+                        >
+                            twenty six
+                        </motion.span>
                     </motion.h1>
 
                     {/* Subtitle */}

@@ -10,13 +10,13 @@ export function CallToAction() {
 
             {/* Background Graphic (Robot - Megatron) */}
             <motion.div
-                className="absolute right-[-10%] md:right-[5%] bottom-0 w-full h-full md:w-[60%] z-0 opacity-80 pointer-events-none select-none"
+                className="absolute right-[-10%] md:right-[5%] bottom-0 w-full h-full md:w-[60%] z-0 opacity-40 pointer-events-none select-none"
                 initial={{ opacity: 0, x: 100 }}
-                whileInView={{ opacity: 0.8, x: 0 }}
+                whileInView={{ opacity: 0.4, x: 0 }}
                 transition={{ duration: 1.2 }}
                 viewport={{ once: true }}
             >
-                <div className="relative w-full h-full brightness-150 contrast-110">
+                <div className="relative w-full h-full brightness-75 contrast-125 grayscale-[0.3]">
                     <Image
                         src="/images/megatron_new.png"
                         alt="Megatron Element"
@@ -30,6 +30,9 @@ export function CallToAction() {
             </motion.div>
 
 
+            {/* Extra Readability Glow behind text */}
+            <div className="absolute inset-0 z-0 bg-radial-gradient from-black/60 via-transparent to-transparent pointer-events-none"></div>
+
             {/* Background Glow */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neon-green/5 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -41,17 +44,24 @@ export function CallToAction() {
                 className="relative z-10"
             >
                 <div className="flex justify-center mb-6">
-                    <div className="p-4 rounded-full border border-neon-green/30 bg-black">
+                    <div className="p-4 rounded-full border border-neon-green/30 bg-black/80 backdrop-blur-sm">
                         <Zap className="w-8 h-8 text-neon-green" />
                     </div>
                 </div>
 
-                <h2 className="font-orbitron font-black text-5xl md:text-7xl skew-y-[-2deg] mb-6">
+                <h2
+                    className="font-orbitron font-black text-5xl md:text-7xl skew-y-[-2deg] mb-6 text-white"
+                    style={{
+                        textShadow: '0 0 30px rgba(0,0,0,0.8), 0 0 10px rgba(0,0,0,0.5)'
+                    }}
+                >
                     READY TO <br />
-                    <span className="text-neon-green">COMPETE?</span>
+                    <span className="text-neon-green" style={{ textShadow: '0 0 20px rgba(204, 255, 0, 0.4)' }}>COMPETE?</span>
                 </h2>
 
-                <p className="font-mono text-gray-400 text-sm max-w-md mx-auto uppercase tracking-widest">
+                <p
+                    className="font-mono text-gray-400 text-sm max-w-md mx-auto uppercase tracking-widest bg-black/40 backdrop-blur-sm px-4 py-2"
+                >
                     Join us at Zestoria 2026 for an unforgettable tech fest experience.
                 </p>
             </motion.div>
