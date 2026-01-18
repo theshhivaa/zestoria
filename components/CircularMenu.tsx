@@ -18,7 +18,7 @@ const menuItems = [
     { id: "hero", label: "HOME", icon: Home, roman: "I" },
     { id: "events", label: "EVENTS", icon: Zap, roman: "II" },
     { id: "schedule", label: "SCHEDULE", icon: Calendar, roman: "III" },
-    { id: "gaming-hub", label: "GAMING", icon: Gamepad2, roman: "IV" },
+    { id: "gaming-hub", label: "GAMING HUB", icon: Gamepad2, roman: "IV" },
     { id: "protocols", label: "RULES", icon: ScrollText, roman: "V" },
     { id: "coordinators", label: "TEAM", icon: Users, roman: "VI" },
     { id: "contact", label: "CONTACT", icon: Mail, roman: "VII" },
