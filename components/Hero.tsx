@@ -3,6 +3,7 @@
 import { motion, useMotionValue, useSpring, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { CircularMenu } from "./CircularMenu";
 
 export function Hero() {
     const mouseX = useMotionValue(0);
@@ -102,7 +103,7 @@ export function Hero() {
                             scale: 1,
                             textShadow: [
                                 "0 0 0px rgba(255,255,255,0)",
-                                "0 0 20px rgba(255,255,255,0.3)",
+                                "0 0 8px rgba(255,255,255,0.4)",
                                 "0 0 0px rgba(255,255,255,0)"
                             ]
                         }}
@@ -123,7 +124,7 @@ export function Hero() {
                             animate={{
                                 textShadow: [
                                     "0 0 0px rgba(204,255,0,0)",
-                                    "0 0 25px rgba(204,255,0,0.5)",
+                                    "0 0 10px rgba(204,255,0,0.6)",
                                     "0 0 0px rgba(204,255,0,0)"
                                 ]
                             }}

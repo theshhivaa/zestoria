@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-
 import { Coordinators } from "@/components/Coordinators";
 import { Events } from "@/components/Events";
 import { GamingHub } from "@/components/GamingHub";
