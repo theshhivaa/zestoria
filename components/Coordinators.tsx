@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import coordinatorsData from "@/data/coordinators.json";
 
 interface Coordinator {
@@ -32,6 +32,15 @@ export function Coordinators() {
             setActiveIndex((prev) => (prev - 1 + orderedCoordinators.length) % orderedCoordinators.length);
         }
     };
+
+    // Auto-rotate every 1 second
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveIndex((prev) => (prev + 1) % orderedCoordinators.length);
+        }, 1000); // 1 second gap
+
+        return () => clearInterval(interval);
+    }, [orderedCoordinators.length]);
 
     const getPosition = (index: number) => {
         const diff = (index - activeIndex + orderedCoordinators.length) % orderedCoordinators.length;
@@ -109,39 +118,8 @@ export function Coordinators() {
                         <div className="absolute w-[300px] h-[300px] bg-neon-green/10 blur-[80px] rounded-full animate-pulse"></div>
                     </div>
 
-                    {/* Mobile Static View (Vertical Stack) */}
-                    <div className="md:hidden flex flex-col items-center justify-center gap-16 py-10 w-full z-20">
-                        {orderedCoordinators.map((person) => (
-                            <div key={person.id} className="flex flex-col items-center w-full max-w-sm relative group">
-                                <div className={`relative w-56 h-56 rounded-full border-4 border-neon-green p-2 bg-black shadow-[0_0_50px_rgba(204,255,0,0.2)] overflow-hidden transition-all duration-500 mx-auto`}>
-                                    <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-white/10">
-                                        <Image
-                                            src={person.image}
-                                            alt={person.name}
-                                            fill
-                                            className={`object-cover transition-all duration-700`}
-                                            style={{ objectPosition: person.objectPosition || 'top' }}
-                                        />
-                                    </div>
-                                </div>
 
-                                <div className={`mt-6 text-center transition-all duration-500 opacity-100 translate-y-0`}>
-                                    <div className="bg-black/80 backdrop-blur-xl border border-neon-green/40 w-72 min-h-[100px] flex flex-col justify-center items-center px-4 py-4 rounded-none relative overflow-hidden shadow-[0_0_30px_rgba(204,255,0,0.1)] mx-auto">
-                                        <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-neon-green"></div>
-                                        <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-neon-green"></div>
-                                        <h4 className="font-orbitron font-black text-xl text-white tracking-tighter uppercase mb-2">
-                                            {person.name}
-                                        </h4>
-                                        <p className="font-mono text-neon-green text-xs uppercase tracking-[0.3em] font-bold">
-                                            {person.role}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
 
-                    {/* Desktop Swipable Container */}
                     <motion.div
                         drag="x"
                         dragConstraints={{ left: 0, right: 0 }}
@@ -149,7 +127,7 @@ export function Coordinators() {
                             if (info.offset.x < -50) handleSwipe('left');
                             else if (info.offset.x > 50) handleSwipe('right');
                         }}
-                        className="hidden md:flex relative w-full h-full items-center justify-center cursor-grab active:cursor-grabbing"
+                        className="relative w-full h-full flex items-center justify-center cursor-grab active:cursor-grabbing"
                     >
                         {orderedCoordinators.map((person, index) => {
                             const pos = getPosition(index);
@@ -184,7 +162,7 @@ export function Coordinators() {
                                             </div>
                                         </div>
 
-                                        <div className={`mt-6 md:mt-10 text-center transition-all duration-500 opacity-100 translate-y-0`}>
+                                        <div className={`mt-6 md:mt-10 text-center transition-all duration-500 ${isCenter ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                                             <div className="bg-black/80 backdrop-blur-xl border border-neon-green/40 w-72 md:w-80 min-h-[100px] md:min-h-[130px] flex flex-col justify-center items-center px-4 py-4 md:px-4 md:py-6 rounded-none relative overflow-hidden shadow-[0_0_30px_rgba(204,255,0,0.1)] mx-auto">
                                                 <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-neon-green"></div>
                                                 <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-neon-green"></div>
