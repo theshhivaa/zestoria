@@ -1,3 +1,4 @@
+import { Instagram } from "lucide-react";
 import contactData from "@/data/contact.json";
 
 export function Footer() {
@@ -74,9 +75,12 @@ export function Footer() {
                                     href={contactData.socialLinks.instagram}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 hover:text-neon-green transition-colors"
+                                    className="inline-flex hover:text-neon-green transition-colors group"
+                                    aria-label="Follow us on Instagram"
                                 >
-                                    <span className="text-neon-green">Instagram:</span> @codingclubsgasc
+                                    <div className="p-3 bg-white/5 border border-white/10 rounded-xl group-hover:border-neon-green/50 group-hover:bg-neon-green/10 transition-all shadow-[0_0_20px_rgba(0,0,0,0.3)] group-hover:shadow-[0_0_30px_rgba(204,255,0,0.15)]">
+                                        <Instagram className="w-5 h-5 text-neon-green shadow-sm" />
+                                    </div>
                                 </a>
                             </li>
                         </ul>

@@ -152,24 +152,6 @@ export function Hero() {
                         Innovate. Compete. Conquer.
                     </motion.p>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.6 }}
-                        className="flex items-center justify-center lg:justify-start"
-                    >
-                        <a
-                            href="#events"
-                            className="group relative px-8 py-4 bg-transparent border border-neon-green hover:bg-neon-green/10 transition-all duration-300"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' });
-                            }}
-                        >
-                            <span className="absolute inset-0 w-full h-full border border-neon-green blur-[2px] opacity-50 group-hover:opacity-100 transition-opacity"></span>
-                            <span className="font-bold text-neon-green uppercase tracking-[0.1em] text-sm">View Events</span>
-                        </a>
-                    </motion.div>
                 </div>
             </div>
 
