@@ -46,7 +46,7 @@ export function Footer() {
                     <div>
                         <h4 className="font-bold text-white uppercase tracking-widest text-xs mb-6">Address</h4>
                         <address className="font-mono text-xs text-gray-400 not-italic leading-relaxed">
-                            <p className="font-bold text-white mb-1">Sree Gokulam Arts and Science College</p>
+                            <p className="font-bold text-white mb-2">{contactData.collegeName}</p>
                             <p>{contactData.address.street}</p>
                             <p>{contactData.address.area}</p>
                             <p>{contactData.address.city}, {contactData.address.state}</p>
