@@ -8,40 +8,15 @@ export function CallToAction() {
     return (
         <section id="contact" className="py-24 relative overflow-hidden flex flex-col items-center justify-center text-center">
 
-            {/* Background Graphic (Robot - Bumblebee) */}
+            {/* Background Graphic (Robot - Megatron) */}
             <motion.div
-                className="absolute left-0 bottom-0 w-full h-full md:w-[60%] z-0 opacity-80 pointer-events-none select-none"
-                initial={{ opacity: 0, x: -50 }}
+                className="absolute right-[-10%] md:right-[5%] bottom-0 w-full h-full md:w-[60%] z-0 opacity-80 pointer-events-none select-none"
+                initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 0.8, x: 0 }}
                 transition={{ duration: 1.2 }}
                 viewport={{ once: true }}
             >
-                <div className="relative w-full h-full brightness-200 contrast-125">
-                    <Image
-                        src="/images/bumblebee_with_text.jpg"
-                        alt="Transformer Element"
-                        fill
-                        className="object-contain object-left-bottom mix-blend-screen"
-                    />
-
-                    {/* Mask for original text in the image */}
-                    <div className="absolute bottom-0 left-0 w-full h-[25%] bg-cyber-black/95 blur-2xl"></div>
-
-                    {/* Masking gradients to blend the robot */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-cyber-black"></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-cyber-black via-transparent to-transparent"></div>
-                </div>
-            </motion.div>
-
-            {/* Right Background Graphic (Megatron) */}
-            <motion.div
-                className="absolute right-0 bottom-0 w-full h-full md:w-[60%] z-0 opacity-60 pointer-events-none select-none"
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 0.6, x: 0 }}
-                transition={{ duration: 1.2, delay: 0.2 }}
-                viewport={{ once: true }}
-            >
-                <div className="relative w-full h-full brightness-125 contrast-110">
+                <div className="relative w-full h-full brightness-150 contrast-110">
                     <Image
                         src="/images/megatron_new.png"
                         alt="Megatron Element"
@@ -53,6 +28,7 @@ export function CallToAction() {
                     <div className="absolute inset-0 bg-gradient-to-t from-cyber-black via-transparent to-transparent"></div>
                 </div>
             </motion.div>
+
 
             {/* Background Glow */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neon-green/5 rounded-full blur-[120px] pointer-events-none"></div>
