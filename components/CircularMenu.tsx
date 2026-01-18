@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import {
     Home,
-    Zap,
+    Trophy,
     Calendar,
     Gamepad2,
     ScrollText,
@@ -16,7 +16,7 @@ import { useState, useEffect } from "react";
 
 const menuItems = [
     { id: "hero", label: "HOME", icon: Home, roman: "I" },
-    { id: "events", label: "EVENTS", icon: Zap, roman: "II" },
+    { id: "events", label: "EVENTS", icon: Trophy, roman: "II" },
     { id: "schedule", label: "SCHEDULE", icon: Calendar, roman: "III" },
     { id: "gaming-hub", label: "GAMING HUB", icon: Gamepad2, roman: "IV" },
     { id: "protocols", label: "RULES", icon: ScrollText, roman: "V" },
