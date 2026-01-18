@@ -199,10 +199,7 @@ export function CircularMenu({ isOpen, onClose }: CircularMenuProps) {
                         </motion.div>
                     </motion.div>
 
-                    {/* Footer Legend */}
-                    <div className="absolute bottom-12 left-1/2 -translate-x-1/2 font-mono text-[10px] text-gray-600 tracking-[0.3em] uppercase opacity-50">
-                        Zestoria Protocol // Nav_Interface_v1.0
-                    </div>
+
                 </motion.div>
             )}
         </AnimatePresence>
