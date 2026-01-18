@@ -54,38 +54,17 @@ export function Navbar() {
                         {/* Mobile menu button */}
                         <div className="md:hidden">
                             <button
-                                onClick={() => setIsOpen(!isOpen)}
-                                className="text-gray-300 hover:text-white focus:outline-none"
+                                onClick={() => setIsHubOpen(true)}
+                                className="group relative px-4 py-1.5 overflow-hidden border border-neon-green/30 active:border-neon-green transition-all duration-300"
                             >
-                                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                                <span className="absolute inset-0 w-full h-full bg-neon-green/5"></span>
+                                <span className="relative font-orbitron font-bold text-neon-green text-xs tracking-[0.2em] uppercase">
+                                    Menu
+                                </span>
                             </button>
                         </div>
                     </div>
                 </div>
-
-                {/* Mobile Menu */}
-                {isOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="md:hidden bg-cyber-black border-b border-neon-green/20"
-                    >
-                        <div className="px-4 pt-4 pb-8 space-y-4 text-center">
-                            <button
-                                onClick={() => {
-                                    setIsOpen(false);
-                                    setIsHubOpen(true);
-                                }}
-                                className="block w-full font-orbitron font-bold text-2xl text-neon-green tracking-widest uppercase py-4 border-y border-white/5"
-                            >
-                                Menu
-                            </button>
-                            <button className="w-full bg-neon-green/10 border border-neon-green text-neon-green px-4 py-3 text-sm font-bold uppercase tracking-widest">
-                                Initiate Protocol
-                            </button>
-                        </div>
-                    </motion.div>
-                )}
             </nav>
 
             {/* Circular Navigation Hub Modal */}

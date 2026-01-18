@@ -149,20 +149,26 @@ export function CircularMenu({ isOpen, onClose }: CircularMenuProps) {
                                         <div className="relative">
                                             {/* Icon Container */}
                                             <div className={`p-4 md:p-6 rounded-full border-2 transition-all duration-300 ${hoveredIndex === index
-                                                    ? "bg-neon-green border-neon-green text-black shadow-[0_0_30px_rgba(204,255,0,0.5)]"
-                                                    : "bg-black/80 border-white/10 text-neon-green group-hover:border-neon-green/50"
+                                                ? "bg-neon-green border-neon-green text-black shadow-[0_0_30px_rgba(204,255,0,0.5)]"
+                                                : "bg-black/80 border-white/10 text-neon-green group-hover:border-neon-green/50"
                                                 }`}>
                                                 <item.icon className="w-6 h-6 md:w-8 md:h-8" />
                                             </div>
 
-                                            {/* Label appearing on hover */}
+                                            {/* Label - visible on hover (desktop) or always (mobile) */}
+                                            <div className="md:hidden absolute top-full left-1/2 -translate-x-1/2 mt-3 whitespace-nowrap">
+                                                <span className="font-orbitron font-bold text-neon-green text-[8px] tracking-widest uppercase">
+                                                    {item.label}
+                                                </span>
+                                            </div>
+
                                             <AnimatePresence>
                                                 {hoveredIndex === index && (
                                                     <motion.div
                                                         initial={{ opacity: 0, scale: 0.8, y: 10 }}
                                                         animate={{ opacity: 1, scale: 1, y: 0 }}
                                                         exit={{ opacity: 0, scale: 0.8, y: 10 }}
-                                                        className="absolute top-full left-1/2 -translate-x-1/2 mt-4 whitespace-nowrap"
+                                                        className="hidden md:block absolute top-full left-1/2 -translate-x-1/2 mt-4 whitespace-nowrap"
                                                     >
                                                         <span className="font-orbitron font-bold text-neon-green text-xs md:text-sm tracking-widest bg-black/90 px-3 py-1 border border-neon-green/20">
                                                             {item.label}
