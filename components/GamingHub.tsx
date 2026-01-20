@@ -84,11 +84,11 @@ export function GamingHub() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ amount: 0.2 }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="relative w-full max-w-sm group"
+                            className="relative w-full max-w-[280px] md:max-w-sm group"
                         >
                             {/* Card Container with custom clip-path shape */}
                             <div
-                                className="relative bg-black/40 border-2 border-neon-green/60 h-[500px] flex flex-col overflow-hidden transition-transform duration-300 group-hover:-translate-y-2 shadow-[0_0_15px_rgba(57,255,20,0.15)] hover:shadow-[0_0_25px_rgba(57,255,20,0.3)]"
+                                className="relative bg-black/40 border-2 border-neon-green/60 h-[380px] md:h-[500px] flex flex-col overflow-hidden transition-transform duration-300 group-hover:-translate-y-2 shadow-[0_0_15px_rgba(57,255,20,0.15)] hover:shadow-[0_0_25px_rgba(57,255,20,0.3)]"
                                 style={{
                                     clipPath: "polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%)"
                                 }}
