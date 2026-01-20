@@ -8,11 +8,21 @@ export function Footer() {
     const [visitCount, setVisitCount] = useState<number | null>(null);
 
     useEffect(() => {
-        // Using a unique namespace for the project
-        fetch('/api/visit-count')
+        // Register visit once on mount
+        fetch('/api/visit-count', { method: 'POST' })
             .then(res => res.json())
             .then(data => setVisitCount(data.value))
-            .catch(err => console.error("Error fetching visit count:", err));
+            .catch(console.error);
+
+        // Poll for updates every 2 seconds
+        const interval = setInterval(() => {
+            fetch('/api/visit-count') // GET request by default
+                .then(res => res.json())
+                .then(data => setVisitCount(data.value))
+                .catch(console.error);
+        }, 2000);
+
+        return () => clearInterval(interval);
     }, []);
 
     return (
