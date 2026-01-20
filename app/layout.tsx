@@ -19,7 +19,7 @@ const rajdhani = Rajdhani({
 
 export const metadata: Metadata = {
   title: "ZESTORIA | Zestoria twenty six",
-  description: "Zestoria twenty six. Technical Fest of Sri Gogalam Arts & Science College.",
+  description: "Zestoria twenty six. Technical Fest of Sri Gogalam Arts & Science College happening on 6th February 2026.",
 };
 
 export default function RootLayout({

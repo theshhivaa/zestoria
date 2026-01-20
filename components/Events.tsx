@@ -26,6 +26,11 @@ interface EventData {
     image: string;
     registrationLink: string;
     objectPosition?: string;
+    registrationFee?: string;
+    prizePool?: {
+        first: string;
+        second: string;
+    };
 }
 
 export function Events() {
@@ -98,6 +103,28 @@ export function Events() {
                                     <p className="font-mono text-gray-400 text-sm mb-6 leading-relaxed flex-1">
                                         {event.description}
                                     </p>
+
+                                    {event.registrationFee && event.prizePool && (
+                                        <div className="grid grid-cols-2 gap-4 mb-6 border-t border-white/10 pt-4">
+                                            <div>
+                                                <p className="font-mono text-[10px] text-gray-500 uppercase tracking-wider mb-1">Entry Fee</p>
+                                                <p className="font-orbitron font-bold text-neon-green text-sm">{event.registrationFee}</p>
+                                            </div>
+                                            <div>
+                                                <p className="font-mono text-[10px] text-gray-500 uppercase tracking-wider mb-1">Prize Pool</p>
+                                                <div className="flex flex-col gap-1">
+                                                    <div className="flex items-center gap-2 text-xs text-gray-300">
+                                                        <span className="text-[10px] font-bold text-yellow-500 bg-yellow-500/10 px-1.5 py-0.5 rounded border border-yellow-500/20">1st</span>
+                                                        <span className="font-mono">{event.prizePool.first}</span>
+                                                    </div>
+                                                    <div className="flex items-center gap-2 text-xs text-gray-300">
+                                                        <span className="text-[10px] font-bold text-gray-400 bg-gray-500/10 px-1.5 py-0.5 rounded border border-gray-500/20">2nd</span>
+                                                        <span className="font-mono">{event.prizePool.second}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
 
                                     <div className="flex flex-wrap gap-2 mb-6">
                                         {event.tags.map((tag, i) => (

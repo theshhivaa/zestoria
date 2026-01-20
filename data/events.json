@@ -4,6 +4,11 @@
         "title": "HELIX OF OLYMPUS",
         "icon": "Terminal",
         "description": "Two minds, one mission — crack the puzzles and seize the flag",
+        "registrationFee": "₹100/TEAM",
+        "prizePool": {
+            "first": "₹1000",
+            "second": "₹500"
+        },
         "tags": [
             "CTF"
         ],
@@ -16,6 +21,11 @@
         "title": "ZETESIS",
         "icon": "Database",
         "description": "Hunt the Bug, Fix the Logic Where errors end and code begins.",
+        "registrationFee": "₹100/TEAM",
+        "prizePool": {
+            "first": "₹1000",
+            "second": "₹500"
+        },
         "tags": [
             "Coding",
             "Technical"
@@ -29,6 +39,11 @@
         "title": "EREBUS ESCAPE",
         "icon": "Zap",
         "description": "Solve the clues, beat the room, unlock your mind.",
+        "registrationFee": "₹50/TEAM",
+        "prizePool": {
+            "first": "₹1000",
+            "second": "₹500"
+        },
         "tags": [
             "Puzzle",
             "Logical thinking",
@@ -43,6 +58,11 @@
         "title": "OXYS",
         "icon": "Shield",
         "description": "A fast-paced competition where college students test speed, accuracy, and focus to prove who truly rules the keyboard.",
+        "registrationFee": "₹25",
+        "prizePool": {
+            "first": "₹500",
+            "second": "₹250"
+        },
         "tags": [
             "Typing challenge",
             "Speed",
@@ -57,6 +77,11 @@
         "title": "WUMPUS WORLD",
         "icon": "Code",
         "description": "A puzzle world where every move matters—use logic, strategy, and smart decisions to survive, avoid dangers, and outthink the unseen Wumpus.",
+        "registrationFee": "₹100/TEAM",
+        "prizePool": {
+            "first": "₹1000",
+            "second": "₹500"
+        },
         "tags": [
             "Challenge",
             "Find the gold",
@@ -71,6 +96,11 @@
         "title": "BGMI TEAM DEATH MATCH",
         "icon": "Cpu",
         "description": "Bring your best squad to the Hangar for a high-octane TDM battle. High speed, high stakes, and non-stop action. Outplay, outaim, and outlast the rest.",
+        "registrationFee": "₹100/TEAM",
+        "prizePool": {
+            "first": "₹1000",
+            "second": "₹500"
+        },
         "tags": [
             "BGMI",
             "4v4",
@@ -85,12 +115,18 @@
         "title": "E-FOOTBALL",
         "icon": "Cpu",
         "description": "The ultimate 1v1 showdown. No script, just pure strategy and elite ball control. Cross the line and claim the trophy.",
+        "registrationFee": "₹30",
+        "prizePool": {
+            "first": "₹500",
+            "second": "₹250"
+        },
         "tags": [
             "E-FOOTBALL",
             "1v1"
         ],
         "status": "https://forms.gle/TrqmnyBmqzyAuh2M7",
-        "image": "https://i.ibb.co/cSdfwp3Q/48-C013-E8-888-C-46-AD-ADA4-AB74-ECAD62-FC.png",
+        "image": "/images/efootball-cover.jpg",
+        "objectPosition": "top center",
         "registrationLink": "https://forms.gle/TrqmnyBmqzyAuh2M7"
     },
     {

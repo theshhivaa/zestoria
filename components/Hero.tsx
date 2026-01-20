@@ -148,7 +148,7 @@ export function Hero() {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="max-w-2xl text-gray-400 text-sm md:text-base font-mono tracking-widest mb-12 uppercase leading-relaxed"
                     >
-                        The Ultimate Tech Fest Experience — February 2026 <br />
+                        The Ultimate Tech Fest Experience — 6th February 2026 <br />
                         Innovate. Compete. Conquer.
                     </motion.p>
 
