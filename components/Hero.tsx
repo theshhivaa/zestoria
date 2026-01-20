@@ -56,14 +56,14 @@ export function Hero() {
 
             {/* Graphical Robot Element */}
             <motion.div
-                className="absolute right-0 bottom-0 w-full h-[80%] md:w-[65%] md:h-full z-0 opacity-40 pointer-events-none select-none"
+                className="absolute right-0 bottom-0 w-full h-[80%] md:w-[65%] md:h-full z-0 pointer-events-none select-none"
                 style={{
                     x: useSpring(mouseX, { stiffness: 40, damping: 25 }),
                     y: robotY,
                     scale: 1.1
                 }}
                 initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 0.4, x: 0 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.5, delay: 0.5 }}
             >
                 <div className="relative w-full h-full">
@@ -72,7 +72,7 @@ export function Hero() {
                         alt="Graphical Robot Element"
                         fill
                         priority
-                        className="object-contain object-right-bottom mix-blend-screen brightness-125 contrast-125 hover:brightness-150 transition-all duration-700"
+                        className="object-contain object-right-bottom brightness-110 contrast-110 hover:brightness-125 transition-all duration-700"
                     />
                 </div>
                 {/* Advanced multi-layer masking to eliminate boxy edges and improve blending */}
@@ -125,7 +125,7 @@ export function Hero() {
                             animate={{
                                 textShadow: [
                                     "0 0 0px rgba(204,255,0,0)",
-                                    "0 0 10px rgba(204,255,0,0.6)",
+                                    "0 0 20px rgba(204,255,0,0.8)",
                                     "0 0 0px rgba(204,255,0,0)"
                                 ]
                             }}
@@ -135,7 +135,7 @@ export function Hero() {
                                 repeatDelay: 1,
                                 ease: "easeInOut"
                             }}
-                            className="text-neon-green"
+                            className="text-neon-green drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
                         >
                             twenty six
                         </motion.span>

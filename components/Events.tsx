@@ -42,7 +42,7 @@ const EventBanner = ({ event, index }: { event: EventData; index: number }) => {
         <motion.div
             initial={{ opacity: 0, x: isEven ? -50 : 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ amount: 0.1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative w-full h-[35vh] min-h-[300px] flex items-center overflow-hidden mb-12 border border-white/10 group"
         >
@@ -137,7 +137,7 @@ export function Events() {
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ margin: "-100px" }}
                     className="font-orbitron font-black text-5xl md:text-7xl text-white uppercase tracking-tighter"
                 >
                     Featured <span className="text-neon-green">Events</span>
@@ -145,7 +145,7 @@ export function Events() {
                 <motion.div
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true }}
+                    viewport={{ margin: "-100px" }}
                     className="max-w-xs mx-auto h-1 bg-neon-green mt-4 transform origin-center"
                 />
             </div>

@@ -23,7 +23,7 @@ export function Navbar() {
                                 window.scrollTo({ top: 0, behavior: 'smooth' });
                             }
                         }}>
-                            <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110 overflow-hidden">
+                            <div className="relative w-20 h-20 transition-transform duration-300 group-hover:scale-110 overflow-hidden">
                                 <Image
                                     src="/images/zestoria-logo.png"
                                     alt="Zestoria Logo"

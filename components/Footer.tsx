@@ -1,7 +1,20 @@
+"use client";
+
 import { Instagram } from "lucide-react";
 import contactData from "@/data/contact.json";
+import { useEffect, useState } from "react";
 
 export function Footer() {
+    const [visitCount, setVisitCount] = useState<number | null>(null);
+
+    useEffect(() => {
+        // Using a unique namespace for the project
+        fetch('https://api.countapi.xyz/hit/zestoria-2026/visits')
+            .then(res => res.json())
+            .then(data => setVisitCount(data.value))
+            .catch(err => console.error("Error fetching visit count:", err));
+    }, []);
+
     return (
         <footer className="bg-black border-t border-white/10 pt-24 pb-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -108,6 +121,15 @@ export function Footer() {
                     <p className="font-mono text-gray-600 text-[10px] uppercase">
                         {contactData.copyright}
                     </p>
+
+                    {/* Visitor Counter */}
+                    <div className="flex items-center gap-2 font-mono text-[10px] uppercase text-gray-500">
+                        <span>Total Visits:</span>
+                        <span className="text-neon-green font-bold">
+                            {visitCount !== null ? visitCount.toLocaleString() : "..."}
+                        </span>
+                    </div>
+
                     <p className="font-mono text-gray-600 text-[10px] uppercase">
                         {contactData.collegeName}
                     </p>
