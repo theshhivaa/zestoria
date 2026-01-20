@@ -13,7 +13,7 @@
             "CTF"
         ],
         "status": "https://docs.google.com/forms/d/e/1FAIpQLScn-846i69IVoD-orxZMTXaL-INCYefYwy6QgiqKR_OerQPcw/viewform?usp=header",
-        "image": "https://i.ibb.co/Myfw1RHP/B60396-AA-2-A4-E-4-E00-A8-B9-7-CFAF3-F88925.jpg",
+        "image": "/images/helix-bg.png",
         "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScn-846i69IVoD-orxZMTXaL-INCYefYwy6QgiqKR_OerQPcw/viewform?usp=header"
     },
     {
@@ -31,7 +31,7 @@
             "Technical"
         ],
         "status": "https://forms.gle/xbLHinx1uhKHVenBA",
-        "image": "https://i.ibb.co/Csnp0fYm/5115-ABA5-F6-CF-4-A32-AE40-441-E6-A3-ECE15.png",
+        "image": "/images/zetesis-bg.png",
         "registrationLink": "https://forms.gle/xbLHinx1uhKHVenBA"
     },
     {
@@ -50,7 +50,7 @@
             "Dark room"
         ],
         "status": "https://forms.gle/kTAnBMv2HUKH4HbQ6",
-        "image": "https://i.ibb.co/7dBcDhZT/451-BDEA6-528-F-44-E5-9-AF2-EF7-FDD01-F7-C6-1-105-c.jpg",
+        "image": "/images/erebus-escape-gen-bg.png",
         "registrationLink": "https://forms.gle/kTAnBMv2HUKH4HbQ6"
     },
     {
@@ -69,7 +69,7 @@
             "Accuracy"
         ],
         "status": "https://forms.gle/n8ojxXpP9CU1SQ3B6",
-        "image": "https://i.ibb.co/4wc3WCRq/Whats-App-Image-2026-01-16-at-19-06-22.jpg",
+        "image": "/images/oxys-bg.png",
         "registrationLink": "https://forms.gle/n8ojxXpP9CU1SQ3B6"
     },
     {
@@ -88,7 +88,7 @@
             "Escape"
         ],
         "status": "https://forms.gle/p2ZDLhjTvn1cBb8W6",
-        "image": "https://i.ibb.co/vxgdLrLm/C3360650-2265-4-FC5-83-EB-6-CD652689-DC1.png",
+        "image": "/images/wumpus-bg.png",
         "registrationLink": "https://forms.gle/p2ZDLhjTvn1cBb8W6"
     },
     {
@@ -107,7 +107,7 @@
             "Team death match"
         ],
         "status": "https://forms.gle/83QkzxnGRUzDYhmS9",
-        "image": "https://i.ibb.co/zHf8pRQc/823-B1827-9-DEB-43-A9-A1-C8-4-C548396-FA27.png",
+        "image": "/images/bgmi-bg.png",
         "registrationLink": "https://forms.gle/83QkzxnGRUzDYhmS9"
     },
     {
@@ -125,8 +125,8 @@
             "1v1"
         ],
         "status": "https://forms.gle/TrqmnyBmqzyAuh2M7",
-        "image": "/images/efootball-cover.jpg",
-        "objectPosition": "top center",
+        "image": "/images/efootball-bg.png",
+        "objectPosition": "center 20%",
         "registrationLink": "https://forms.gle/TrqmnyBmqzyAuh2M7"
     },
     {
@@ -135,10 +135,10 @@
         "icon": "WORKSHOP",
         "description": "An elegant blend of creativity and code, where innovation flows effortlessly.Code smart with AI",
         "tags": [
-            "VIBE CODING"
+            "A HANDS-ON WORKSHOP ON VIBE CODING"
         ],
         "status": "https://forms.gle/JsYaCwcbhSFPeWS49",
-        "image": "https://i.ibb.co/Kj07gyQb/258-C7-E10-A1-BA-4-A0-C-80-C4-569-BCAF52-D42.jpg",
+        "image": "/images/harmonia-bg.png",
         "objectPosition": "center 20%",
         "registrationLink": "https://forms.gle/JsYaCwcbhSFPeWS49"
     }

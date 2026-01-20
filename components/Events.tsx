@@ -1,10 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Terminal, Cpu, Shield, Code, Zap, Database, LucideIcon } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Terminal, Cpu, Shield, Code, Zap, Database, LucideIcon, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import eventsData from "@/data/events.json";
+import { useRef } from "react";
 
 // Icon map to resolve string icon names to components
 const iconMap: Record<string, LucideIcon> = {
@@ -33,118 +34,126 @@ interface EventData {
     };
 }
 
+// Separate component for individual event banner to keep things clean
+const EventBanner = ({ event, index }: { event: EventData; index: number }) => {
+    const isEven = index % 2 === 0;
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, x: isEven ? -50 : 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="relative w-full h-[35vh] min-h-[300px] flex items-center overflow-hidden mb-12 border border-white/10 group"
+        >
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src={event.image}
+                    alt={event.title}
+                    fill
+                    style={{ objectPosition: event.objectPosition || 'center' }}
+                    className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-40 group-hover:opacity-60"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent" />
+                {/* Sidebar Number / Decorative element */}
+                <div className={`absolute ${isEven ? 'left-0' : 'right-0'} top-0 bottom-0 w-12 md:w-20 bg-black/50 backdrop-blur-sm border-r border-white/10 flex flex-col items-center justify-center z-20`}>
+                    <span className="font-orbitron font-bold text-lg md:text-xl text-white/50 -rotate-90 whitespace-nowrap tracking-widest">
+                        {String(index + 1).padStart(2, '0')} / EXPERIENTIA
+                    </span>
+                </div>
+            </div>
+
+            {/* Content Container */}
+            <div className={`relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex ${isEven ? 'justify-start' : 'justify-end'}`}>
+                <div className={`max-w-2xl ${isEven ? 'pl-12 md:pl-24' : 'pr-12 md:pr-24 text-right'} flex flex-col ${isEven ? 'items-start' : 'items-end'}`}>
+
+                    {/* Title */}
+                    <h3 className="font-orbitron font-black text-3xl md:text-5xl text-white mb-2 uppercase leading-none tracking-tighter">
+                        {event.title.split(' ')[0]}
+                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-neon-green to-emerald-500">
+                            {event.title.split(' ').slice(1).join(' ') || "EVENT"}
+                        </span>
+                    </h3>
+
+                    {/* Description */}
+                    <p className="font-mono text-gray-300 text-xs md:text-sm mb-4 max-w-lg leading-relaxed mix-blend-screen">
+                        {event.description}
+                    </p>
+
+                    {/* Meta Info (Fee, Prize) */}
+                    {(event.registrationFee || event.prizePool) && (
+                        <div className={`flex flex-wrap gap-6 mb-6 ${isEven ? 'justify-start' : 'justify-end'}`}>
+                            {event.prizePool && (
+                                <div className="flex flex-col">
+                                    <span className="font-mono text-[10px] text-neon-green uppercase tracking-wider block mb-1">Prize Pool</span>
+                                    <div className="flex gap-4">
+                                        <div>
+                                            <span className="text-[10px] text-gray-400 block">1st</span>
+                                            <span className="font-orbitron text-lg text-white">{event.prizePool.first}</span>
+                                        </div>
+                                        <div>
+                                            <span className="text-[10px] text-gray-400 block">2nd</span>
+                                            <span className="font-orbitron text-lg text-white">{event.prizePool.second}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+                            {event.registrationFee && (
+                                <div>
+                                    <span className="font-mono text-[10px] text-neon-green uppercase tracking-wider block mb-1">Entry</span>
+                                    <span className="font-orbitron text-lg text-white">{event.registrationFee}</span>
+                                </div>
+                            )}
+                        </div>
+                    )}
+
+
+
+                    {/* Link */}
+                    <Link
+                        href={event.registrationLink}
+                        className="group/btn inline-flex items-center gap-2 px-5 py-2 bg-neon-green/10 border border-neon-green/50 hover:bg-neon-green hover:text-black transition-all duration-300"
+                    >
+                        <span className="font-mono text-xs uppercase tracking-widest font-bold text-neon-green group-hover/btn:text-black">
+                            Register Now
+                        </span>
+                        <ArrowUpRight className="w-4 h-4 text-neon-green group-hover/btn:text-black" />
+                    </Link>
+                </div>
+            </div>
+
+            {/* Decorative Scanline */}
+            <div className="absolute inset-0 pointer-events-none bg-[url('/scanline.png')] opacity-10" />
+        </motion.div>
+    );
+};
+
 export function Events() {
     return (
-        <section className="py-24 relative overflow-hidden bg-black" id="events">
-            {/* Background elements */}
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-green/20 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-green/20 to-transparent"></div>
+        <section className="relative bg-black py-20" id="events">
 
-            {/* Graphical Scan Line */}
-            <motion.div
-                className="absolute inset-y-0 w-px bg-gradient-to-b from-transparent via-neon-green/10 to-transparent z-0"
-                animate={{
-                    left: ["0%", "100%", "0%"]
-                }}
-                transition={{
-                    duration: 15,
-                    repeat: Infinity,
-                    ease: "linear"
-                }}
-            />
-
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <motion.div
+            <div className="relative z-10 mb-20 text-center px-4">
+                <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    className="text-center mb-16"
+                    className="font-orbitron font-black text-5xl md:text-7xl text-white uppercase tracking-tighter"
                 >
-                    <h2 className="font-orbitron font-bold text-4xl md:text-5xl text-white mb-4 tracking-wider">
-                        FEATURED <span className="text-neon-green">EVENTS</span>
-                    </h2>
-                    <p className="font-mono text-gray-400 text-sm md:text-base max-w-2xl mx-auto">
-                        Choose your arena. Showcase your skills. Compete with the best.
-                    </p>
-                </motion.div>
+                    Featured <span className="text-neon-green">Events</span>
+                </motion.h2>
+                <motion.div
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    viewport={{ once: true }}
+                    className="max-w-xs mx-auto h-1 bg-neon-green mt-4 transform origin-center"
+                />
+            </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    {(eventsData as EventData[]).map((event, index) => {
-                        const IconComponent = iconMap[event.icon] || Terminal;
-                        return (
-                            <motion.div
-                                key={event.id}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="group relative bg-white/5 border border-white/10 hover:border-neon-green/50 overflow-hidden transition-all duration-300 hover:bg-white/10 flex flex-col"
-                            >
-                                <div className="relative h-48 w-full overflow-hidden">
-                                    <Image
-                                        src={event.image}
-                                        alt={event.title}
-                                        fill
-                                        style={{ objectPosition: event.objectPosition || 'center' }}
-                                        className="object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-                                </div>
-
-                                <div className="p-6 md:p-8 flex-1 flex flex-col">
-                                    <div className="mb-4">
-                                        <h3 className="font-orbitron font-bold text-xl text-white mb-2 group-hover:text-neon-green transition-colors">
-                                            {event.title}
-                                        </h3>
-                                        <div className="h-0.5 w-12 bg-neon-green/50 group-hover:w-full transition-all duration-300"></div>
-                                    </div>
-
-                                    <p className="font-mono text-gray-400 text-sm mb-6 leading-relaxed flex-1">
-                                        {event.description}
-                                    </p>
-
-                                    {event.registrationFee && event.prizePool && (
-                                        <div className="grid grid-cols-2 gap-4 mb-6 border-t border-white/10 pt-4">
-                                            <div>
-                                                <p className="font-mono text-[10px] text-gray-500 uppercase tracking-wider mb-1">Entry Fee</p>
-                                                <p className="font-orbitron font-bold text-neon-green text-sm">{event.registrationFee}</p>
-                                            </div>
-                                            <div>
-                                                <p className="font-mono text-[10px] text-gray-500 uppercase tracking-wider mb-1">Prize Pool</p>
-                                                <div className="flex flex-col gap-1">
-                                                    <div className="flex items-center gap-2 text-xs text-gray-300">
-                                                        <span className="text-[10px] font-bold text-yellow-500 bg-yellow-500/10 px-1.5 py-0.5 rounded border border-yellow-500/20">1st</span>
-                                                        <span className="font-mono">{event.prizePool.first}</span>
-                                                    </div>
-                                                    <div className="flex items-center gap-2 text-xs text-gray-300">
-                                                        <span className="text-[10px] font-bold text-gray-400 bg-gray-500/10 px-1.5 py-0.5 rounded border border-gray-500/20">2nd</span>
-                                                        <span className="font-mono">{event.prizePool.second}</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )}
-
-                                    <div className="flex flex-wrap gap-2 mb-6">
-                                        {event.tags.map((tag, i) => (
-                                            <span key={i} className="text-[10px] font-mono uppercase px-2 py-1 bg-white/5 border border-white/10 text-gray-300 rounded">
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div>
-
-                                    <Link
-                                        href={event.registrationLink}
-                                        className="w-full block text-center py-3 bg-transparent border border-neon-green/30 text-neon-green font-mono text-xs uppercase tracking-widest hover:bg-neon-green hover:text-black transition-all duration-300 group-hover:border-neon-green"
-                                    >
-                                        Initiate_Registration
-                                    </Link>
-                                </div>
-                            </motion.div>
-                        );
-                    })}
-                </div>
+            <div className="flex flex-col">
+                {(eventsData as EventData[]).map((event, index) => (
+                    <EventBanner key={event.id} event={event} index={index} />
+                ))}
             </div>
         </section>
     );
