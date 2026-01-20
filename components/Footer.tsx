@@ -9,7 +9,7 @@ export function Footer() {
 
     useEffect(() => {
         // Using a unique namespace for the project
-        fetch('https://api.countapi.xyz/hit/zestoria-2026/visits')
+        fetch('/api/visit-count')
             .then(res => res.json())
             .then(data => setVisitCount(data.value))
             .catch(err => console.error("Error fetching visit count:", err));

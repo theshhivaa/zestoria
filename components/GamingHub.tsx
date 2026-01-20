@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Gamepad2, Gauge, Users, Glasses } from "lucide-react";
+import { useState } from "react";
 
 const features = [
     {
@@ -27,6 +28,8 @@ const features = [
 ];
 
 export function GamingHub() {
+    const [activeCard, setActiveCard] = useState<number | null>(null);
+
     return (
         <section id="gaming-hub" className="py-24 relative overflow-hidden bg-cyber-black border-t border-white/5">
             {/* Background Effects */}
@@ -84,7 +87,8 @@ export function GamingHub() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ amount: 0.2 }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="relative w-full max-w-[280px] md:max-w-sm group"
+                            className="relative w-full max-w-[280px] md:max-w-sm group cursor-pointer"
+                            onClick={() => setActiveCard(activeCard === index ? null : index)}
                         >
                             {/* Card Container with custom clip-path shape */}
                             <div
@@ -120,7 +124,7 @@ export function GamingHub() {
                                     )}
 
                                     {/* Overlay Description on Hover */}
-                                    <div className="absolute inset-0 bg-black/80 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div className={`absolute inset-0 bg-black/80 flex items-center justify-center p-6 transition-opacity duration-300 ${activeCard === index ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
                                         <p className="font-mono text-neon-green text-sm text-center">
                                             {feature.description}
                                         </p>
@@ -139,11 +143,6 @@ export function GamingHub() {
                                 {/* Corner Accents */}
                                 <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-neon-green/30 rounded-tr-lg pointer-events-none"></div>
                                 <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-purple-600/30 rounded-bl-lg pointer-events-none"></div>
-                            </div>
-
-                            {/* Vertical Label */}
-                            <div className="absolute top-12 -left-8 -rotate-90 origin-right text-[10px] text-gray-600 font-mono tracking-[0.2em] uppercase whitespace-nowrap hidden xl:block">
-                                ZESTORIA // {feature.title.split(' ')[0]}
                             </div>
                         </motion.div>
                     ))}
