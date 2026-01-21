@@ -68,10 +68,7 @@ export function Timeline() {
                                 <h3 className="font-orbitron font-bold text-xl text-white uppercase mb-1 group-hover:text-neon-green transition-colors">
                                     {item.event}
                                 </h3>
-                                <div className="flex items-center gap-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-neon-green"></div>
-                                    <span className="font-mono text-gray-400 text-xs uppercase">{item.location}</span>
-                                </div>
+                                {/* Location removed as it's not in the data data */}
                             </div>
 
                             <div className="w-full md:w-1/4 flex justify-start md:justify-end mt-4 md:mt-0">
