@@ -5,7 +5,6 @@ import { useState, useRef } from "react";
 import scheduleData from "../data/schedule.json";
 
 export function Timeline() {
-    const [activeDay, setActiveDay] = useState(1);
     const containerRef = useRef<HTMLElement>(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -18,7 +17,8 @@ export function Timeline() {
         restDelta: 0.001
     });
 
-    const activeSchedule = scheduleData.find(d => d.day === activeDay)?.events || [];
+    // We only have one day now, so we can just grab the first one
+    const activeSchedule = scheduleData[0]?.events || [];
 
     return (
         <section id="schedule" ref={containerRef} className="py-24 bg-cyber-dark-gray/30 relative overflow-hidden">
@@ -43,31 +43,16 @@ export function Timeline() {
                     </div>
 
                     <div className="flex gap-2">
-                        <button
-                            onClick={() => setActiveDay(1)}
-                            className={`px-6 py-2 font-bold text-xs uppercase tracking-widest transition-colors ${activeDay === 1
-                                ? 'bg-neon-green text-black'
-                                : 'bg-transparent border border-white/20 text-gray-400 hover:border-white/50'
-                                }`}
-                        >
-                            Day 1
-                        </button>
-                        <button
-                            onClick={() => setActiveDay(2)}
-                            className={`px-6 py-2 font-bold text-xs uppercase tracking-widest transition-colors ${activeDay === 2
-                                ? 'bg-neon-green text-black'
-                                : 'bg-transparent border border-white/20 text-gray-400 hover:border-white/50'
-                                }`}
-                        >
-                            Day 2
-                        </button>
+                        <div className="px-6 py-2 bg-neon-green text-black font-bold text-xs uppercase tracking-widest">
+                            6th FEB
+                        </div>
                     </div>
                 </div>
 
                 <div className="space-y-4">
                     {activeSchedule.map((item, index) => (
                         <motion.div
-                            key={`${activeDay}-${index}`}
+                            key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -75,7 +60,7 @@ export function Timeline() {
                             className="flex flex-col md:flex-row items-center border border-white/10 bg-black/40 p-6 hover:border-neon-green/30 transition-colors group"
                         >
                             <div className="flex items-center gap-4 w-full md:w-1/4 mb-4 md:mb-0">
-                                <span className="text-gray-500 font-mono text-xs">EVENT_ID_{activeDay}{index + 10}</span>
+                                <span className="text-gray-500 font-mono text-xs">EVENT_ID_{index + 10}</span>
                                 <span className="font-orbitron font-bold text-3xl text-neon-green">{item.time}</span>
                             </div>
 

@@ -1,46 +1,41 @@
 [
     {
         "day": 1,
+        "date": "6th FEB",
         "events": [
             {
-                "time": "10:00",
+                "time": "10:00am",
                 "event": "HELIX OF OLYMPUS",
-                "location": "Main Auditorium",
                 "status": "OPEN"
             },
             {
-                "time": "11:30",
+                "time": "11:15am",
                 "event": "ZETESIS",
-                "location": "Main Auditorium",
                 "status": "OPEN"
             },
             {
-                "time": "12:30",
-                "event": "Break",
-                "status": "OPEN"
-            }
-        ]
-    },
-    {
-        "day": 2,
-        "events": [
-            {
-                "time": "10:00",
-                "evennpm t": "Hackathon Kickoff",
-                "location": "Innovation Hub",
-                "status": "CONFIRMED"
-            },
-            {
-                "time": "13:00",
-                "event": "Networking Lunch",
-                "location": "Cafeteria",
+                "time": "11:30am",
+                "event": "BGMI TEAM DEATH MATCH",
                 "status": "OPEN"
             },
             {
-                "time": "16:00",
-                "event": "Project Expo & Awards",
-                "location": "Main Auditorium",
-                "status": "SCHEDULED"
+                "time": "12:15pm",
+                "event": "BREAK"
+            },
+            {
+                "time": "1:15pm",
+                "event": "OXYS",
+                "status": "OPEN"
+            },
+            {
+                "time": "1:30pm",
+                "event": "E-FOOTBALL",
+                "status": "OPEN"
+            },
+            {
+                "time": "2:30pm",
+                "event": "HARMONIA WORKSHOP",
+                "status": "OPEN"
             }
         ]
     }
