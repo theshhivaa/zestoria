@@ -20,7 +20,7 @@
         "id": "ZETESIS",
         "title": "ZETESIS",
         "icon": "Database",
-        "description": "Hunt the Bug, Fix the Logic Where errors end and code begins.",
+        "description": "Hunt the Bug, Fix the Logic Where errors end and code begins. This event uses Python programming.",
         "registrationFee": "₹100/TEAM",
         "prizePool": {
             "first": "₹1000",
@@ -128,6 +128,25 @@
         "image": "/images/efootball-bg.png",
         "objectPosition": "center 20%",
         "registrationLink": "https://forms.gle/TrqmnyBmqzyAuh2M7"
+    },
+    {
+        "id": "MINI MILITIA",
+        "title": "MINI MILITIA",
+        "icon": "Crosshair",
+        "description": "Experience the chaos of intense multiplayer combat. Fly, shoot, and survive in this 2D shooter phenomenon.",
+        "registrationFee": "₹100/TEAM",
+        "prizePool": {
+            "first": "₹1000",
+            "second": "₹500"
+        },
+        "tags": [
+            "Shooting",
+            "Multiplayer",
+            "Action"
+        ],
+        "status": "https://docs.google.com/forms/d/e/1FAIpQLSf8n0dZHDxSJZFAR-loV1AGrTeS7xSz7D8pm1qACilsoF9vAA/viewform?usp=publish-editor",
+        "image": "/images/mini-militia-bg.png",
+        "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSf8n0dZHDxSJZFAR-loV1AGrTeS7xSz7D8pm1qACilsoF9vAA/viewform?usp=publish-editor"
     },
     {
         "id": "HARMONIA WORKSHOP",

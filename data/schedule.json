@@ -34,6 +34,11 @@
             },
             {
                 "time": "2:30pm",
+                "event": "MINI MILITIA",
+                "status": "OPEN"
+            },
+            {
+                "time": "2:30pm",
                 "event": "HARMONIA WORKSHOP",
                 "status": "OPEN"
             }

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Terminal, Cpu, Shield, Code, Zap, Database, LucideIcon, ArrowUpRight } from "lucide-react";
+import { Terminal, Cpu, Shield, Code, Zap, Database, LucideIcon, ArrowUpRight, Crosshair } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import eventsData from "@/data/events.json";
@@ -14,7 +14,8 @@ const iconMap: Record<string, LucideIcon> = {
     Shield,
     Code,
     Zap,
-    Database
+    Database,
+    Crosshair
 };
 
 interface EventData {
@@ -71,9 +72,11 @@ const EventBanner = ({ event, index }: { event: EventData; index: number }) => {
                     {/* Title */}
                     <h3 className="font-orbitron font-black text-3xl md:text-5xl text-white mb-2 uppercase leading-none tracking-tighter">
                         {event.title.split(' ')[0]}
-                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-neon-green to-emerald-500">
-                            {event.title.split(' ').slice(1).join(' ') || "EVENT"}
-                        </span>
+                        {event.title.split(' ').length > 1 && (
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-neon-green to-emerald-500">
+                                {event.title.split(' ').slice(1).join(' ')}
+                            </span>
+                        )}
                     </h3>
 
                     {/* Description */}

@@ -14,6 +14,7 @@
         "rules": [
             "Individual participation.",
             "Debugging challenge.",
+            "Language used is Python.",
             "Code must be efficient and clean.",
             "Time limit will be strictly followed."
         ]
@@ -66,6 +67,17 @@
             "Condition should be good",
             "Every match is a knock out",
             "Network problem is not considered"
+        ]
+    },
+    {
+        "eventId": "MINI MILITIA",
+        "rules": [
+            "Team size: 4 members.",
+            "Mini Militia Classic",
+            "No modded versions allowed.",
+            "Map: Outpost.",
+            "Time limit: 10 mins.",
+            "Knockout matches."
         ]
     },
     {
