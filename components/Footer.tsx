@@ -111,6 +111,30 @@ export function Footer() {
                     </div>
                 </div>
 
+                {/* Sponsors Section */}
+                <div className="flex flex-col items-center justify-center border-t border-white/5 pt-8 mb-8">
+                    <h4 className="font-bold text-white uppercase tracking-widest text-xs mb-6">Sponsored By</h4>
+                    <div className="flex items-center gap-8 bg-white p-6 rounded-xl">
+                        <img
+                            src="/sponsors/riders-cafe.jpg"
+                            alt="Riders Cafe"
+                            className="h-20 md:h-24 object-contain"
+                        />
+                        <div className="h-16 w-px bg-gray-200"></div>
+                        <img
+                            src="/sponsors/rayon.jpg"
+                            alt="Rayon"
+                            className="h-20 md:h-24 object-contain"
+                        />
+                        <div className="h-16 w-px bg-gray-200"></div>
+                        <img
+                            src="/sponsors/al-raydan-logo.jpg"
+                            alt="Al Raydan"
+                            className="h-20 md:h-24 object-contain"
+                        />
+                    </div>
+                </div>
+
                 {/* Quick Links */}
                 <div className="border-t border-white/5 pt-8 mb-8">
                     <div className="flex flex-wrap justify-center gap-8">
