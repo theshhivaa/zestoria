@@ -167,6 +167,9 @@ export function Footer() {
                     <p className="font-mono text-gray-600 text-[10px] uppercase">
                         {contactData.collegeName}
                     </p>
+                    <p className="font-mono text-gray-600 text-[10px] uppercase">
+                        Developed by <span className="text-neon-green">SHIVA PRASAD S</span>
+                    </p>
                 </div>
             </div>
         </footer>
